@@ -1,0 +1,28 @@
+# Ignore bin folder
+bin/
+
+# Mac system files
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.Spotlight-V100
+.Trashes
+
+# VSCode / IDE files
+.vscode/
+.idea/
+
+# C++ compiled files
+*.out
+*.o
+*.obj
+*.exe
+
+# Python
+__pycache__/
+*.pyc
+
+# Java compiled files
+*.class
