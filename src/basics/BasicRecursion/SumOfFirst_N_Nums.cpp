@@ -5,12 +5,12 @@ using namespace std ;
 //recursion happens in 2 ways namely parameterised & functional
 
 //method1 : parameterised way
-void sum(int i, int s, int n){
-    if(i>n){
+void sum(int i, int s){
+    if(i<1){
         cout << s ;
         return;
     }
-    sum(i+1,s+i, n);
+    sum(i-1,s+i);
 }
 
 //method2 : functional
@@ -23,7 +23,8 @@ int summ(int n){
 int main(){
     int n ;
     cin >> n ;
-    sum(1,0, n);
-
+    //for 1st
+    sum(n,0);
+    //for 2nd
     cout << summ(n) ;
 }

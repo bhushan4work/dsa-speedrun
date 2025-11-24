@@ -59,14 +59,12 @@ int main(){
     cin >> s2;
     //ex s = abgfuidt
 
-    //precompute
-    int hash2[26] = {0};
+    int hash2[26] = {0}; //precompute
     for(int i = 0; i < s2.size(); i++){
         hash2[s2[i] - 'a']++;
     }
 
-    //queries
-    int q2;
+    int q2; //queries
     cin >> q2; 
     while(q2--){
         char c2;
@@ -79,14 +77,12 @@ int main(){
     string s3;
     cin >> s3;
 
-    //precompute
-    int hash3[256] = {0};
+    int hash3[256] = {0}; //precompute
     for(int i = 0; i < s3.length(); i++){
         hash3[s3[i]]++;
     }
 
-    //queries
-    int q3;
+    int q3; //queries
     cin >> q3;
     while(q3--){
         char c3;
@@ -122,7 +118,6 @@ int main(){
         // fetch:
         cout << mp[number] << endl; // Simplified: mp[number] returns 0 if key doesn't exist
     }
-
     return 0;
 }
 
