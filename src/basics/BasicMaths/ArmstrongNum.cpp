@@ -2,25 +2,28 @@
 #include <cmath>
 using namespace std ;
 
-//ArmstrongNUm = suppose num=123 so if 1^3 + 2^3 + 3^3 = 123 then its ArmstrongNum
+//ArmstrongNUm = 
 
 int main(){
     int n ;
-    cout << "enter a num : " ;
     cin >> n ;
-    int sum = 0 ;
-    int dup = n ;   //for making a duplicate copy of the num to compare with sum
-
-    while(n>0){
-        int lastdigit = n % 10 ; //gives lastdigit
-        sum += pow(lastdigit, 3); //does the cube of the lastdigit
-        n /= 10 ; //remove lastdigit
+    int dup = n; 
+    
+    //counts num of digits
+    int k = 0; //counter for num of digits
+    int temp = n; //taken as variable as when we check 'n' below in while loop we need original num & not edited one
+    while (temp > 0) {
+        k++;
+        temp /= 10; //removes lastdigit & returns rest of the num
+    }
+    
+    int sum = 0;
+    temp = n;
+    while (temp > 0) {
+        int lastdigit = temp % 10;
+        sum += pow(lastdigit, k);
+        temp /= 10; //removes lastdigit & returns rest of the num
     }
 
-    if (dup == sum){
-        cout << "yes. Its a ArmstrongNum" ;
-    }
-    else{
-        cout << "no. Its not a ArmstrongNum" ;
-    }
+    return sum == dup; //returns true if ArmstrongNum ,else false
 }

@@ -1,4 +1,4 @@
-#include <iostream>
+#include <bits/stdc++.h>
 using namespace std ;
 
 int main(){
@@ -7,7 +7,6 @@ int main(){
     int n1 , n2 ;
     cin >> n1 ;
     cin >> n2 ;
-
     for(int i = Math.min(n1,n2); i >=1 ; i--){
         if(n1 % i ==0 && n2 % i ==0){
             cout << i ;
@@ -25,13 +24,13 @@ int main(){
     // (greater % smaller) to avoid unwanted steps and jump near the ans
     while(n1 > 0 && n2 >0 ){
         if(n1>n2){
-            n1 %= n2 ;
+            n1 %= n2 ; //basically greater % smaller is to be done
         }
         else{
             n2 %= n1 ;
         }
 
-        if(n1 ==0 ){
+        if(n1 ==0 ){ //when one of the two becomes 0,other one is gcd
             cout << n2 ;
         }
         else{

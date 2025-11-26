@@ -2,7 +2,6 @@
 using namespace std ;
 
 //LeetCode 9. Palindrome Number - Easy
-
 bool isPalindrome(int x){
     if (x < 0 || (x % 10 == 0 && x != 0)){
         return false;
@@ -12,11 +11,11 @@ bool isPalindrome(int x){
     int original = x;
 
     while (x > 0) {
-        int digit = x % 10;
-        reversed = reversed * 10 + digit;
-        x /= 10;
+        int lastdigit = x % 10; 
+        reversed = reversed * 10 + lastdigit; 
+        x /= 10; //removes lastdigit & returns rest of the num
     }
-    return original == reversed;
+    return original == reversed; //returns true if palindrome, else false
 }
 
 int main(){

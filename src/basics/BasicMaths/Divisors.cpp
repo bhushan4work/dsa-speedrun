@@ -1,8 +1,4 @@
-#include <iostream> 
-#include <vector>
-#include <algorithm>
-#include <cmath>
-
+#include <bits/stdc++.h>
 using namespace std ;
 
 int main(){
@@ -25,8 +21,8 @@ int main(){
     for(int i = 1; i <= sqrt(n); i++){
         if(n % i == 0){
             list.push_back(i);
-            if(n / i != i){
-                list.push_back(n / i);
+            if(n / i != i){  //counts divisor in pair
+            list.push_back(n / i); 
             }
         }
     }
