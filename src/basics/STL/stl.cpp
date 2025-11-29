@@ -20,9 +20,9 @@ void explainVector(){
     v1.push_back(1); //adds 1 into container
     v1.emplace_back(2); //incr its size and pushes 2 at the back
 
-    vector <pair<int,int> vec;
-    vec.push_back(1,2);
-    vec.emmplace_back(3,4);
+    vector <pair<int,int>> vec;
+    vec.push_back({1,2}); //stores as pair - [(1,2)]
+    vec.emplace_back(3,4); //[(1,2) , (3,4)]
 
     vector<int> v2(5,100); //contains {100,100,100,100,100}
     vector<int> v2(5); //contains arr of size 5 having garbage value,size can incr if push_back is used
