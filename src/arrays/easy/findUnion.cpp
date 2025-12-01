@@ -2,7 +2,7 @@
 #include <bits/stdc++.h>
 
 vector < int > sortedArray(vector < int > a, vector < int > b) {
-    //method1(brute)- t.c.- O(n1logn + n2logn) + (n1 + n2)  s.c.- O(n1+n2) + O(n1+n2) here in s.c. n1 & n2 is used to return the ans
+    //method1(brute)- t.c.- O(n1logn + n2logn) + O(n1 + n2)  s.c.- O(n1+n2) + O(n1+n2) here in s.c. n1 & n2 is used to return the ans
     int n1 = a.size();
     int n2 = b.size();
 

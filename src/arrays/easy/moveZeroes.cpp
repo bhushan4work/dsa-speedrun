@@ -1,6 +1,6 @@
 
 void moveZeroes(vector<int>& arr, int n){
-    //method1- (brute) t.c.- O(n + x + (n-x)) , s.c- O(x) & for worstcase(no zeroes)- O(n)
+    //method1- (brute) t.c.- O(n + x + (n-x)) = O(2n) , s.c- O(x) & for worstcase(no zeroes)- O(n)
     //Zeroes at the end
     vector<int> temp;
     for(int i=0;i<n;i++){
