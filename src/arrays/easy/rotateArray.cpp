@@ -1,6 +1,8 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+//rotateArray -  shifting position of the elements either to the left or right by 1
+
 //optimal approach t.c.- O(n) , s.c. (in algo) - O(n) , s.c.-(extra space)- O(1) 
 vector<int> rotateArray(vector<int>& arr, int n) {
     // Left Rotate an Array by One

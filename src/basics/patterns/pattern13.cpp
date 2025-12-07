@@ -1,6 +1,11 @@
 #include <iostream> 
-
 using namespace std ;
+//2 inputs needed ,ex: for 3 3
+// 3 3 3 3 3 
+// 3 2 2 2 3 
+// 3 2 1 2 3 
+// 3 2 2 2 3 
+// 3 3 3 3 3 
 
 void pattern13(int n){
     for(int i=0; i< 2*n-1; i++){

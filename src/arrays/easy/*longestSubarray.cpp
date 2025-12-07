@@ -1,4 +1,4 @@
-//Find length of longest subarray in which sum of elements is equal to ‘K’. → 2 subquestion - one with arr having both +ves & -ves & other with only +ves
+//Find length of longest subarray in which sum of elements is equal to ‘K’. → 2 subquestion - one with arr having both +ves -ves & other with only +ves
 
 #include <bits/stdc++.h> 
 int getLongestSubarray(vector<int>& arr, int k){

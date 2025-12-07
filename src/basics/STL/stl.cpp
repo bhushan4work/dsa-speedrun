@@ -1,8 +1,7 @@
 #include <bits/stdc++.h> //includes all the libraries combined
 using namespace std;
 
-//T.C.- push=pop= logn, top=O(n)
-//pair
+//T.C.- push=pop= O(logn), top=O(n)
 void explainPair(){
     pair<int,int> p1 = {1,3};
     cout << p.first << "  " << p.second; //prints 1 3
@@ -14,7 +13,6 @@ void explainPair(){
     cout << arr[1].second; //prints 4
 }
 
-//vectors
 void explainVector(){
     vector<int> v1; //creates an empty container
     v1.push_back(1); //adds 1 into container
@@ -30,15 +28,15 @@ void explainVector(){
 
     //ex: take v = {20,10,50,4,5}
     vector<int>v;
-    vector<int>::iterator it = v.begin(); //points memory address of element i.e 20
+    vector<int>::iterator it = v.begin(); //points memory address of element '20'
     it++; //jumps to next element i.e 10
     cout << *(it); //* prints the num not address
 
-    it = it + 2; //shifts by 2 i.e 4
+    it = it + 2; //shifts by 2 i.e num '4'
     cout << *i(t); //prints 4
 
     vector<int>::iterator it = v.
-    vector<int>::iterator it = v.end(); //points out element after 5; if it-- is done after this,  then we get 5
+    vector<int>::iterator it = v.end(); //points out element after 5; if it-- is done after this then we get 5
     cout << v.back(); //prints 5
 
     for(vector<int>::iterator it = v.begin(); it != v.end(); it++){
@@ -72,7 +70,6 @@ void explainVector(){
 
 void explainList(){
     list<int>ls;
-
     ls.push_back(2); //{2}
     ls.emplace_back(4); //{2,4}
     ls.push_front(5); //{5,2,4}
@@ -88,8 +85,8 @@ void explainDeque(){
     dq.emplace_front(3); //{3,4,1,2}
     dq.pop_back(); //{3,4,1}
     dq.pop_front(); //{4,1}
-    dq.back();
-    dq.front();
+    dq.back(); //used to reference the last element i.e it gives '1'
+    dq.front(); //used to reference the first element i.e it gives '4'
     //rest fxns same as vector
     //begin,end,rend,rbegin,insert,size,swap
 }
@@ -110,7 +107,7 @@ void explainStack(){
     st1.swap(st2);
 }
 
-//Queue- think of it as a line at ticket-stall or bucket
+//Queue- think of it as a line at ticket-stall
 // FIFO- first in, first out
 void explainQueue(){
     queue<int>q;
@@ -118,18 +115,18 @@ void explainQueue(){
     q.push(2); //{1,2}
     q.emplace(3); //{1,2,3}
 
-    q.back() += 5; //do 3+5 i.e adds 5 to value at last
+    q.back() += 5; //does 3+5 i.e adds 5 to value at last
     cout << q.back(); //prints 8
     cout << q.front(); //prints 1
     q.pop(); //pops out the value at 1st position -{2,3}
     cout << q.front(); //prints 2
     //rest fxns same as stack- size swap empty
 }
-//PQ- think of it as a bucket
-void explainPQ{
-    //maxheap- largest num,etc is given priority
-    priority_queue<int>pq;
 
+//PriorityQueue- think of it as a bucket
+void explainPQ{
+    //maxheap- largest num is given priority
+    priority_queue<int>pq;
     pq.push(5); //{5}
     pq.push(2); //{5,2}
     pq.emplace(10); //{10,5,2}
@@ -138,7 +135,7 @@ void explainPQ{
     pq.pop(); //topmost gets deleted i.e 10
     //other fxns same as queue- size swap empty
 
-    //for minimum heap- minimum num,etc is given priority
+    //for minimum heap- minimum num is given priority
     priority_queue<int, vector<int>, greater<int>>pq;
     pq.push(5); //{5}
     pq.push(2); //{2,5}
@@ -155,7 +152,7 @@ void explainSet(){
     st.insert(4); //{1,2,4}
 
     auto it = st.find(2); //returns iterator which points to 2 i.e address & not the value
-    auto it = st.find(5); //returns iterator(after end value) i.e 4 in set as 5 doesnt exist
+    auto it = st.find(5); //returns iterator(at last element) i.e '4' as 5 doesnt exist
     st.erase(4);
 
     int cnt = st.count(1); //counts if 1 exist, if yes then 1 else 0
@@ -169,7 +166,8 @@ void explainSet(){
     auto it = st.upper_bound(4); //returns iterator of next element greater than which is asked
     auto it = st.lower_bound(2); //same like .find ,if a value doesnt exist then it points to immediate next greater num in set    
 }
-//MultiSet- similar to set,stores duplicate\same values also
+
+//MultiSet- similar to set,stores duplicate\same values too
 void explainMultiSet(){
     multiset<int>ms;
     ms.insert(1); //{1} 
@@ -177,14 +175,15 @@ void explainMultiSet(){
     ms.insert(2); //{1,2,2}
 
     ms.erase(2); //erases both 2's here
-    //if we erase value it deletes all, but if we erase address it deletes a specific address & not all
+    //if we erase value it deletes all, but if we erase address it deletes a specific address & not all elements
     ms.erase(ms.find(2)); //erases address of 1st occurrence of 2
     ms.erase(ms.find(2),ms.find(2)+2); //finds address of 2 & goes till 2times i.e both 2's gets erased
 
     int cnt1 = ms.count(2);
-    //rest fxns are same as -set 
+    //rest fxns are same as set 
 }
-//UnorderedSet- no order i.e doesnt sort the elements, stores unique values
+
+//UnOrderedSet- no order i.e doesnt sort the elements, stores unique values
 void explainUSet(){
     unordered_set<int>us;
     //lowerbound & upperbound doesnt work here
@@ -206,7 +205,7 @@ void explainMap(){
     //  {3,1}; 
     mpp[{2,3}] = 10; // {{2,3},10}
 
-    for(auto it : mpp){ //it stores in pair thatiswhy .first .second is used to access the values in each pair
+    for(auto it : mpp){ //it stores in pair that is why .first .second is used to access the values in each pair
         cout << it.first << " " << it.second;
     }
     cout << mpp[1]; //gives '2' as it is value to the key 1
@@ -265,9 +264,4 @@ void explainExtra(){
     }while(next_permutation(s.begin(),s.end()));
     int maximum = *max_element(a,a+n);
     int minimum = *min_element(a,a+n);
-
-}
-
-int main(){
-    explainPair();
 }

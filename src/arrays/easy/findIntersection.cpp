@@ -1,12 +1,12 @@
 //intersection of 2 sorted arr's
-//ex arr1[1,2,3,3,4] arr2[1,2,2,3,3,4] - here as 2 has only one 2 as a partner in 2nd arr ,only 1time 2 will be added but for 3 it will be added 2times as 2 pairs exists
+//ex arr1[1,2,3,3,4] arr2[1,2,2,3,3,4] - 2 in 1st arr has only one 2 as a partner in 2nd arr ,only 1time 2 will be added but for 3 it will be added 2times as 2 pairs exists
 
 vector<int> findArrayIntersection(vector<int> &arr1, int n, vector<int> &arr2, int m){
-    //method1(brute)-  t.c.- O(n1*n2)  s.c.- O(n2)  ,(this approach gives an TLE error on submission)
+    //method1(brute)-  t.c.- O(n1*n2)  s.c.- O(n2)  ,(this approach gives an TLE error )
 	vector<int> ans;
-	vector<int> visited(m, 0); //marks which indices of arr2 are already used
+    vector<int> visited(m, 0); //arr of size m where each element is initialised to 0, marks indices of arr2 which are already used
 	for(int i=0;i<n;i++){
-		for(int j=0;j<m;j++){
+        for(int j=0;j<m;j++){
 			if(arr1[i] == arr2[j] && visited[j] == 0){ //checks if both elements are same & if this arr2[j] element was NOT matched earlier.
 				ans.push_back(arr1[i]);
 				visited[j] = 1; //Marks arr2[j] as "used".
@@ -24,13 +24,13 @@ vector<int> findArrayIntersection(vector<int> &arr1, int n, vector<int> &arr2, i
     vector<int> ans;
     while(i<n && j<m){
         if(arr1[i] < arr2[j]){  
-            i++;   //Moves the pointer of the smaller value forward as arr is sorted we need to incr to catchup the same values 
+            i++;  //Moves pointer of smaller value forward as arr is sorted & we need to move to catchup the same values 
         }
         else if (arr1[i] > arr2[j]){
-            j++;  //Moves the pointer of the smaller value forward as arr is sorted we need to incr to catchup the same values
+            j++;  //Moves pointer of smaller value forward as arr is sorted & we need to move to catchup the same values
         }
-        else{
-            ans.push_back(arr1[i]); //when same value found , both pointers r moved forward to avoid duplicates 
+        else{ //same values found
+            ans.push_back(arr1[i]); //when same value found ,both pointers moves forward to avoid duplicates 
             i++;
             j++;
         }

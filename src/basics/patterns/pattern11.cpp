@@ -1,6 +1,11 @@
 #include <iostream>
-
 using namespace std ;
+//2 inputs needed ,ex: for 3 3
+// *    *
+// **  **
+// ******
+// **  **
+// *    *
 
 void pattern11a(int n){
     for(int i=0; i< n; i++){

@@ -10,8 +10,8 @@ using namespace std;
 
 int main(){
     // ---NumHashing---
-    //instead of making a 'for' loop & checking freq of num in array we do hashing as it takes less time
-    //input goes like - ex : 5 -         size of array
+    //instead of making 'for' loop & checking freq of num in array we do hashing as it takes less time
+    //input goes like - ex : 5           size of array
     //                       2 3 4 5 6   array
     //                       3           num of queries
     //                       2 4 5       query is num 2 ,4, 5
@@ -21,7 +21,7 @@ int main(){
     //T.C - O(q*n) as we arent looping instead, we having 'q' num of queries
     int n1;
     cin >> n1;
-    int arr1[n1]; //makes an array of size n
+    int arr1[n1]; //makes an array of size n1
     for (int i = 0; i < n1; i++) {
         cin >> arr1[i]; //iterates over each input of the array given
     }
@@ -35,7 +35,7 @@ int main(){
     //for i = 2: arr at [2] = 3
     //hash[3]++ i.e, hash[3] goes from 1 → 2
     int hash1[13] = {0}; //creates an array of size 13, initialized to 0
-    //num here which is 13 rn depends on the max num of the given array
+    //13 num here depends on the maxNum of the given array
     for (int i = 0; i < n1; i++) {
         hash1[arr1[i]]++;
     }

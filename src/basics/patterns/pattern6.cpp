@@ -1,6 +1,9 @@
 #include <iostream> 
-
 using namespace std ;
+//2 inputs needed ,ex: for 3 3
+// A
+// AB
+// ABC
 
 void pattern6(int n){
     for(int i=0;i<n;i++){

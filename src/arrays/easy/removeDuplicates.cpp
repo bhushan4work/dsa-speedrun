@@ -3,12 +3,12 @@ using namespace std;
 //remove duplicate from sorted array
 
 int removeDuplicates(vector<int>& nums) {
-    //method1(brute force) - t.c.- nlogn + n
+    //method1(brute force) - t.c.- O(nlogn + n)
     set <int> st; //stores unique elements from arr
     for(int i=0;i<nums.size();i++){
         st.insert(nums[i]); //inserts unique elements in set from arr nums
     }
-    index = 0;
+    int index = 0;
     for(auto it : st){
         nums[index] = it; //changes arr of duplicates to arr of unique elements
         index++;

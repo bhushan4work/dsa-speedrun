@@ -1,3 +1,5 @@
+//Find the number that appear once,where other numbers appear twice
+
 int singleNumber(vector<int>& arr) {
     //method1-(brute)  t.c.- O(n^2) s.c.- O(1)
     int n = arr.size();
@@ -19,7 +21,7 @@ int singleNumber(vector<int>& arr) {
         maxi = max(maxi, arr[i]); // Finds the max value in the arr
     }
 
-    vector<int> hash(maxi + 1, 0);
+    vector<int> hash(maxi + 1, 0); //creates new arr of size 'maxi + 1' where all values are set to 0
     for (int i = 0; i < n; i++) {
         hash[arr[i]]++;  //Counts the frequency of each num
     }
@@ -31,7 +33,7 @@ int singleNumber(vector<int>& arr) {
     return -1;
 
     //method3-(optimal)  t.c.- O(n) s.c.- O(1)
-    //xor- returns true(or 1) if 2 inputs are diff, else false(or 0) if the 2 inputs are same
+    //xor- returns true(or 1) when 2 inputs are diff, else false(or 0) when 2 inputs are same
     int n = arr.size();
     int xorr = 0;
     for (int i = 0; i < n; i++) {

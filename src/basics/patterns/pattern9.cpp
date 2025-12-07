@@ -1,7 +1,9 @@
 #include <iostream>
-
 using namespace std ;
-
+//2 inputs needed ,ex: for 3 3
+// C
+// BC
+// ABC
 void pattern9(int n){
     for(int i=0; i< n; i++){
         for(char ch=(char)('A'+ (n-i-1) ) ; ch<= 'A'+ n-1; ch++){ //or put ch='e'-i;ch<='e'

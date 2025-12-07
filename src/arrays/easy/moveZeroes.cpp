@@ -8,32 +8,32 @@ void moveZeroes(vector<int>& arr, int n){
             temp.push_back(arr[i]); //stores nonZero element in temp arr
         }
     }
-    int nz = temp.size();
-    for(int i=0;i<nz;i++){
-        arr[i] = temp[i]; //puts back all nonZero element in arr
+    for(int i=0;i<temp.size();i++){
+        arr[i] = temp[i]; //puts back all nonZero element in arr from temp
     }
-    for(int i=nz;i<n;i++){
+    for(int i=temp.size();i<n;i++){
         arr[i] = 0; //assigns remaining values as 0
     }
     return arr;
 
     //Zeroes at beginning
     vector<int> temp;
+    int cnt = 0; //counts the num of zeroes in arr
     for(int i = 0; i < n; i++) {
-        if(arr[i] == 0) {
-            temp.push_back(arr[i]);   // store all zeroes in temp arr
+        if(arr[i] != 0) {
+            temp.push_back(arr[i]);  // store all nonZeroes in temp arr
+        }
+        else{
+            cnt++;
         }
     }
-    int z = temp.size();
-    for(int i = 0; i < zc; i++) {
-        arr[i] = 0; //puts zeroes at the start of array
+    for (int i = 0; i < cnt; ++i) {
+        arr[i] = 0; //puts back all the zeroes at beginning
     }
-    int j = z;
-    for(int i = 0; i < n; i++) {
-        if(arr[i] != 0) { 
-            arr[idx] = arr[i]; //puts the nonZero elements after the temp arr of zeroes
-            j++;
-        }
+    int j = 0; //pointer to place nonZero elements back to arr
+    for(int i = cnt; i<n; i++) {
+        arr[i] = temp[j]; //puts zeroes at the start of array
+        j++; //to get next element from temp
     }
     return arr;
 

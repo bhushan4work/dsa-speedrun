@@ -53,7 +53,4 @@ vector < int > sortedArray(vector < int > a, vector < int > b) {
         i++;
     }
     return unionArr;
-
-
-     
 }
