@@ -2,6 +2,7 @@
 #include <unordered_map>
 using namespace std;
 
+//in hashmap- keys are placed in sorted order
 void CountFreq1(int arr1[], int n1){
     bool visited[n1] = {false}; // Initialize all to false
 
