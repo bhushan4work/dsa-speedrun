@@ -1,8 +1,5 @@
-#include <iostream>
-#include <cmath>
-using namespace std ;
-
-//ArmstrongNUm = 
+//statement- Given an integer N, return true it is an Armstrong number otherwise return false
+//ArmstrongNum- An Amrstrong number is a number that is equal to the sum of its own digits each raised to the power of the number of digits.
 
 int main(){
     int n ;

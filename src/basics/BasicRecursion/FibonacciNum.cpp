@@ -1,8 +1,6 @@
-#include <iostream>
-#include <vector>
-using namespace std ;
+//statement- Given an integer N. Print the Fibonacci series up to the Nth term
+//FibonacciNum- a sequence where each number is the sum of the two preceding ones, typically starting with 0 and 1
 
-//Leetcode - 509. Fibonacci Number -- Easy
 //3 functional recursion with multiple calls
 int fibonacci(int N){ //fxn is made for 3rd method
     // Base Condition.

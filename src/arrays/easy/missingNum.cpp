@@ -1,4 +1,5 @@
-//find missingNum betn 1 to n nums in array
+//statement- find missingNum betn 1 to n nums in array
+
 int missingNumber(vector<int>&arr, int n) {
     //method1-(brute)  t.c.- O(n*n)  s.c.- O(1)
     for(int i=1;i<=n;i++){ //as we want to check missingNum betn 1 to n

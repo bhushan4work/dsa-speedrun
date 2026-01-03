@@ -1,6 +1,6 @@
-// stock buy & sell - You want to maximize your profit by choosing a single day to buy 1 stock and choosing a different day in the future to sell that stock.
+//statement- You want to maximize your profit by choosing a single day to buy 1 stock and choosing a different day in the future to sell that stock.
 //                    Return the maximum profit you can achieve from this transaction. If you cannot achieve any profit, return 0.
-// this problem comes under dynamic programming as it remembers the past
+//this problem comes under dynamic programming as it remembers the past
 
 // method1(brute)-  t.c- O(n^2) s.c- O(1)
 int maxProfit(vector<int> &prices){

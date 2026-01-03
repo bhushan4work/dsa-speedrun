@@ -1,8 +1,6 @@
-#include <bits/stdc++.h>
-#include <climits>  // For INT_MAX and INT_MIN
-using namespace std ;
+//statement- Given an integer N return the reverse of the given number
+//Note: If number has trailing zeros, then its reverse will not include them. For ex: reverse of 10400 will be 401 instead of 00401
 
-//LeetCode 7. Reverse Integer - Medium
 int reverse(int x) {
     int reversed = 0;
     while (x != 0) {

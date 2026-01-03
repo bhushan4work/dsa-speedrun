@@ -1,4 +1,4 @@
-//Find the number that appear once,where other numbers appear twice
+//statement- Find the number that appear once,where other numbers appear twice
 
 int singleNumber(vector<int>& arr) {
     //method1-(brute)  t.c.- O(n^2) s.c.- O(1)

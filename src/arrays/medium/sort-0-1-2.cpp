@@ -1,4 +1,4 @@
-//problem- Given an arr consisting of only 0,1,or2. Sort the arr in non-decreasing order. The sorting must be done in-place, without making copy of original arr.
+//statement- Given an arr consisting of only 0,1,or2. Sort the arr in non-decreasing order. The sorting must be done in-place, without making copy of original arr.
 
 //method1(brute) t.c- O(nlogn) s.c- O(logn)
 void sortColors(vector<int>& arr) {

@@ -1,4 +1,5 @@
-//find the max times '1' occur in an arr consecutively
+//statement- find the max times '1' occur in an arr consecutively
+
 int findMaxConsecutiveOnes(vector<int>& nums) {
     //t.c- O(n)
     int maxOnes = 0; //keeps track of max consecutive 1's

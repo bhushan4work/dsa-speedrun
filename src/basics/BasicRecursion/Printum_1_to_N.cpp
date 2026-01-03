@@ -1,5 +1,4 @@
-#include <iostream>
-using namespace std ;
+//statement- Given an integer N, write a program to print numbers from 1 to N
 
 //method1
 void func(int i,int n){

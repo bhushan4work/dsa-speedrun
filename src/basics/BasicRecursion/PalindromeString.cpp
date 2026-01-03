@@ -1,10 +1,6 @@
-#include <iostream> 
-#include <string> 
-using namespace std ;
-
+//statement- Given a string, check if the string is palindrome or not. A string is said to be palindrome if the reverse of the string is the same as the string
 //palindrome - which gives same output as of input on reversal
 
-//Leetcode - 125. Valid Palindrome - Easy
 //method1
 bool isPalindrome(string str) {
     int left = 0, right = str.length()-1;

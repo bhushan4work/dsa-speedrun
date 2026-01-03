@@ -1,4 +1,4 @@
-// 2sum - subque1) if sum of 2 nums == target print yes else no ; subque2) if sum of 2 nums == target return their index else {-1,-1}
+//statement- subque1) if sum of 2 nums == target print yes else no ; subque2) if sum of 2 nums == target return their index else {-1,-1}
 
 //method1(brute) t.c- O(n^2) s.c- O(1)
 string twoSumExists(vector<int> &arr, int target){

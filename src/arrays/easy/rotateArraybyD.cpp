@@ -1,8 +1,5 @@
-//Left rotate an array by D places
-#include <bits/stdc++.h>
-using namespace std;
-
-//rotateArray by d places - shifting position of the elements either to the left or right by k places
+//statement- Left rotate an array by D places
+//rotateArray by d places- shifting position of the elements either to the left or right by k places
 
 vector<int> rotateArray(vector<int>arr, int k) {
     int n = arr.size();

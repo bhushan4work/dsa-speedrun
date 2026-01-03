@@ -1,5 +1,4 @@
-#include <iostream>
-using namespace std;
+//statement- Given an integer N, return the number of digits in N
 
 int countdigits(int n){
     int count = 0;

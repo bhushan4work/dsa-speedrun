@@ -1,5 +1,4 @@
-#include <bits/stdc++.h>
-using namespace std ;
+//statement- Given two integers N1 and N2, find their greatest common divisor
 
 int main(){
     //method1

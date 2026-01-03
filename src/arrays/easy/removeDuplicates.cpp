@@ -1,6 +1,4 @@
-#include <bits/stdc++.h>
-using namespace std;
-//remove duplicate from sorted array
+//statement- remove duplicate from sorted array
 
 int removeDuplicates(vector<int>& nums) {
     //method1(brute force) - t.c.- O(nlogn + n)

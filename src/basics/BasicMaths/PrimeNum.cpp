@@ -1,6 +1,4 @@
-#include <bits/stdc++.h>
-
-using namespace std ;
+//statement-  Given an integer N, return true if it is a palindrome else return false
 
 int main(){
     int n ; 

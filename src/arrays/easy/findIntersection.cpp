@@ -1,5 +1,5 @@
-//intersection of 2 sorted arr's
-//ex arr1[1,2,3,3,4] arr2[1,2,2,3,3,4] - 2 in 1st arr has only one 2 as a partner in 2nd arr ,only 1time 2 will be added but for 3 it will be added 2times as 2 pairs exists
+//statement- find intersection of 2 sorted arr's
+//           ex arr1[1,2,3,3,4] arr2[1,2,2,3,3,4] - 2 in 1st arr has only one 2 as a partner in 2nd arr ,only 1time 2 will be added but for 3 it will be added 2times as 2 pairs exists
 
 vector<int> findArrayIntersection(vector<int> &arr1, int n, vector<int> &arr2, int m){
     //method1(brute)-  t.c.- O(n1*n2)  s.c.- O(n2)  ,(this approach gives an TLE error )

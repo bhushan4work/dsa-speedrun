@@ -1,9 +1,7 @@
-#include <iostream>
-using namespace std ;
-
-//T.C - O(n) , S.C - O(n)
+//statement- Given a number ‘N’, find out the sum of the first N natural numbers
 //recursion happens in 2 ways namely parameterised & functional
 
+//T.C - O(n) , S.C - O(n)
 //method1 : parameterised way
 void sum(int i, int s){
     if(i<1){

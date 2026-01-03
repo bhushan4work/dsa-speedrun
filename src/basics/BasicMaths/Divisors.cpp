@@ -1,5 +1,4 @@
-#include <bits/stdc++.h>
-using namespace std ;
+//statement- Given an integer N, return all divisors of N
 
 int main(){
     int n ;

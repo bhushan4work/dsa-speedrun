@@ -1,6 +1,4 @@
-#include <iostream>
-#include <algorithm> //for reverse 
-using namespace std ;
+//statement- You are given an array. The task is to reverse the array and print it
 
 void reverseArrayy(int i,int arr[],int n) {
     if(i>=n/2) return;

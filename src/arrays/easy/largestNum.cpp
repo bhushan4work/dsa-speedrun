@@ -1,6 +1,5 @@
-#include <bits/stdc++.h> 
-using namespace std;
-//find largest num in an arr
+//statement- find largest num in an arr
+
 int largestElement(vector<int> &arr, int n) {
     //method1 - sort the array & return the lastnum , t.c.- O(nlogn) 
     sort(arr.begin(), arr.end());

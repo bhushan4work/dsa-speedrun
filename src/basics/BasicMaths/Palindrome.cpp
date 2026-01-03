@@ -1,7 +1,6 @@
-#include <iostream> 
-using namespace std ;
+//statement- Given an integer N, return true if it is a palindrome else return false
+//palindrome- is a number that reads the same backward as forward. For ex: 121, 1331 are palindromes coz they remain the same when their digits are reversed.
 
-//LeetCode 9. Palindrome Number - Easy
 bool isPalindrome(int x){
     if (x < 0 || (x % 10 == 0 && x != 0)){
         return false;

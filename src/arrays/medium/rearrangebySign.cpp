@@ -1,7 +1,7 @@
-// statement- 'arr' with an equal number of +ves & -ves is given.Without altering relative order of +ves & -ves elements,
+//statement- 'arr' with an equal number of +ves & -ves is given.Without altering relative order of +ves & -ves elements,
 //              return an arr of alternately +ves & -ves values.
 
-// method1(optimal)  t.c- O(n + n/2)  s.c- O(n)
+//method1(optimal)  t.c- O(n + n/2)  s.c- O(n)
 vector<int> RearrangeBySign(vector<int> &arr, int n){
     vector<int> pos, neg;
     for (int i = 0; i < n; i++){

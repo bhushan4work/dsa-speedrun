@@ -1,4 +1,4 @@
-//problem- given an element that appears more than n/2 times in arr. The arr is guaranteed to have majority element.
+//statement- given an element that appears more than n/2 times in arr. The arr is guaranteed to have majority element.
 
 // method1(brute) t.c- O(n^2)  s.c- O(1)
 int majorityElement(vector<int> &arr){

@@ -1,6 +1,6 @@
-// maxSubarraySum - find the subarray with the largest sum and return the sum of the elements present in that subarray.
+//statement- find the subarray with the largest sum and return the sum of the elements present in that subarray.
 
-// method1(brute)  t.c- O(n^3)  s.c- O(1)
+//method1(brute)  t.c- O(n^3)  s.c- O(1)
 int maxSubArray(vector<int> &nums)
 {
     int maxi = INT_MIN; // Initialize maxSum with smallest possible int

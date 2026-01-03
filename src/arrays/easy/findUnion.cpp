@@ -1,5 +1,4 @@
-//find union of 2 sorted arr- take unique elements from 2 arr's & join them into a single arr
-#include <bits/stdc++.h>
+//statement- find union of 2 sorted arr- take unique elements from 2 arr's & join them into a single arr
 
 vector < int > sortedArray(vector < int > a, vector < int > b) {
     //method1(brute)- t.c.- O(n1logn + n2logn) + O(n1 + n2)  s.c.- O(n1+n2) + O(n1+n2) here in s.c. n1 & n2 is used to return the ans

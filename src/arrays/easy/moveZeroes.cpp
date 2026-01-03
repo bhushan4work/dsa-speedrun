@@ -1,3 +1,4 @@
+//statement- move all the zeroes in given arr at the end of the arr 
 
 void moveZeroes(vector<int>& arr, int n){
     //method1- (brute) t.c.- O(n + x + (n-x)) = O(2n) , s.c- O(x) & for worstcase(no zeroes)- O(n)

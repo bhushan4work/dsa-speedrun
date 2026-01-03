@@ -1,5 +1,4 @@
-#include <bits/stdc++.h>
-using namespace std;
+//statemeent- find the 2nd smallest & 2nd largest element in array. Print ‘-1’ in the event that either of them doesn’t exist.
 
 vector<int> getSecondOrderElements(int n, vector<int> a) {
     //method1(bruteForce) t.c.- nlogn + n    
