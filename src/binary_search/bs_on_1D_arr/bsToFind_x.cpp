@@ -5,7 +5,7 @@
 
 // method1(Iterative) t.c- O(logn) base is 2  s.c- O(1)
 int binarySearch(vector &nums, int target){
-    int n = nums.size(); // size of the array
+    int n = nums.size(); 
     int low = 0, high = n - 1;
 
     while (low <= high){ // Keep searching until low crosses high
@@ -22,23 +22,21 @@ int binarySearch(vector &nums, int target){
 
 // method2(Recursive) t.c- O(logn) base is 2   s.c- O(1)
 int binarySearch(vector &nums, int low, int high, int target){
+    int n = nums.size(); 
     if (low > high)
         return -1; // Base case: target not found
 
-    // Find middle index
-    int mid = (low + high) / 2;
+    int mid = (low + high) / 2;   // Find middle index
 
-    // If target is found at mid
-    if (nums[mid] == target)
+    if (nums[mid] == target) // If target is found at mid
         return mid;
-    // If target is greater, search right half
-    else if (target > nums[mid])
+    else if (target > nums[mid])  // If target is greater, search right side of mid
         return binarySearch(nums, mid + 1, high, target);
-    // Otherwise, search left half
-    return binarySearch(nums, low, mid - 1, target);
+
+    return binarySearch(nums, low, mid - 1, target);   // Otherwise, search left side of mid
 }
 
 // Public function to initiate search
 int search(vector &nums, int target){
-    return binarySearch(nums, 0, nums.size() - 1, target);
+    return binarySearch(nums, 0, n - 1, target);
 }
