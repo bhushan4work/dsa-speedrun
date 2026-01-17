@@ -3,8 +3,6 @@
 //  in this given rotated arr , either the left or right half will be sorted from mid so we check for such side & then eliminate accordingly
 
 
-//TYPE 1 - arr has unique elements ---------------------
-
 //method1(brute) t.c- O(n)  s.c- O(1)  -normal iteration is done i.e bs not used here
 int search(vector<int> &arr, int target){
     for (int i = 0; i < arr.size(); i++){
@@ -29,7 +27,6 @@ int search(vector<int> &nums, int target){
 
         // Check if the left half is sorted
         if (nums[low] <= nums[mid]){
-
             if (nums[low] <= target && target < nums[mid]) { // If target lies in the sorted left half, search there
                 high = mid - 1;
             }
@@ -40,7 +37,6 @@ int search(vector<int> &nums, int target){
 
         // Otherwise, right half is sorted
         else{
-
             if (nums[mid] < target && target <= nums[high]){ // If target lies in the sorted right half, search there
                 low = mid + 1;
             }
@@ -55,21 +51,11 @@ int search(vector<int> &nums, int target){
 
 
 
-//TYPE 2 - arr has duplicate elements ---------------------
+//FAQ's- same above question with duplicate elements
 //note: same above code with one edge case added will will work here. [3,1,2,3,3,3,3]
 //in above example we get mid=low=high so we cant determine sorted side & so we shrink the arr from both sides by 1
 
-//method1(brute) t.c- O(n)  s.c- O(1)  -normal iteration is done i.e bs not used here
- bool search(vector<int>& arr, int target) {
-        for (int i = 0; i < arr.size(); i++) {
-            if (arr[i] == target) {
-                return true;
-            }
-        }
-        return false;
-    }
-
-//method2(optimal) t.c- O(logn)  s.c- O(1)  -bs algo used here
+//(optimal) t.c- O(logn)  s.c- O(1)  -bs algo used here
 bool searchInARotatedSortedArrayII(vector<int>& arr, int k) {
     int n = arr.size();
     int low = 0, high = n - 1;
@@ -102,6 +88,5 @@ bool searchInARotatedSortedArrayII(vector<int>& arr, int k) {
             }
         }
     }
-
     return false;
 }
