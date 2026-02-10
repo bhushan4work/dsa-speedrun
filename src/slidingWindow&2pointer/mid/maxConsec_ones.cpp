@@ -47,7 +47,7 @@ int longestOnes(vector<int> &nums, int k){
 }
 
 // method3(optimal) t.c- O(n)  s.c- O(1)
-//here we move both l & r until we find a window with cntZeros <= k & so the while loop in above aproach is not needed here
+//here we move both l & r by 1 alternatively until we find a window with cntZeros <= k & so the while loop in above aproach is not needed here
 int longestOnes(vector<int> &nums, int k){
     int left = 0;
     int cntZeros = 0;
