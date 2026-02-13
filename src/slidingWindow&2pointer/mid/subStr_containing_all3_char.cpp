@@ -42,6 +42,7 @@ int numberOfSubstrings(string s){
 }
 
 //alternative to map we can also use vector for freq
+//use map only for que where huge data is to stored, as here we know that only 3 char is to be stored in map we should use a vector for better tc
 int countSubstring(string s) {
     int n = s.size();
     int l = 0;
