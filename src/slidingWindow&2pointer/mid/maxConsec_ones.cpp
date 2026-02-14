@@ -21,27 +21,27 @@ int longestOnes(vector<int> &nums, int k){
     return maxLen;
 }
 
-// method2(better) t.c- O(2n)  s.c- O(1)
+// method2(better) t.c- O(n + n)  s.c- O(1)
 //here we shrink from left to right if cntZeros exceeds k until we find 1st 0 
 int longestOnes(vector<int> &nums, int k){
-    int left = 0;
+    int l = 0 , r = 0;
     int cntZeros = 0;
     int maxLen = 0;
 
-    for (int right = 0; right < nums.size(); right++){
-        
-        if (nums[right] == 0){ // If current element is zero, increment zero counter
+    while(r < nums.size()){
+        if (nums[r] == 0 ){ // If current element is zero, increment zero counter
             cntZeros++;
         }
 
         while (cntZeros > k){ // If cntZeros exceeds k, shrink the window from left to right till we get 1st zero 
-            if (nums[left] == 0){
-                cntZeros--;
+            if (nums[l] == 0){
+               cntZeros--; //if u find zero to the left , remove it & decr its counter
             }
-            left++; // Move the left pointer forward
+            l++; // Move the left pointer forward
         }
-        // Update the max length of valid window
-        maxLen = max(maxLen, right - left + 1);
+        // else when cntZeros <= k, Update max length of valid window & move right
+        maxLen = max(maxLen, r - l + 1);
+        r++;
     }
     return maxLen;
 }
@@ -49,23 +49,25 @@ int longestOnes(vector<int> &nums, int k){
 // method3(optimal) t.c- O(n)  s.c- O(1)
 //here we move both l & r by 1 alternatively until we find a window with cntZeros <= k & so the while loop in above aproach is not needed here
 int longestOnes(vector<int> &nums, int k){
-    int left = 0;
+
+    int l = 0 , r = 0;
     int cntZeros = 0;
-    int maxlen = 0;
+    int maxLen = 0;
 
-    for (int right = 0; right < nums.size(); right++){
-
-        if (nums[right] == 0){ // If current element is 0, increment cntZeros
+    while(r < nums.size()){
+        if (nums[r] == 0 ){ // If current element is zero, increment zero counter
             cntZeros++;
         }
 
-        if (cntZeros > k){ // If zero count exceeds k, move left pointer and adjust cntZeros
-            if (nums[left] == 0){
-                cntZeros--;
+        if (cntZeros > k){ // If cntZeros exceeds k, shrink the window from left to right till we get 1st zero 
+            if (nums[l] == 0){
+               cntZeros--; //if u find zero to the left , remove it & decr its counter
             }
-            left++; // Shrink the window from left
+            l++; // Move the left pointer forward
         }
-        maxlen = max(maxlen, right - left + 1); // Update the maximum window size
+        //else when cntZeros <= k, Update max length of valid window & move right
+        maxLen = max(maxLen, r - l + 1);
+        r++;
     }
-    return maxlen;
+    return maxLen;
 }
