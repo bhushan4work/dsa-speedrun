@@ -25,7 +25,7 @@ int numSubarraysWithSum(vector<int> &nums, int goal){
     prefixSumCount[0] = 1; // Add base case: prefix sum 0 has frequency 1
 
     for (int i=0;i<nums.size();i++){
-        sum += num; // Add current element to prefix sum
+        sum += nums[i]; // Add current element to prefix sum
 
         if (prefixSumCount.find(sum - goal) != prefixSumCount.end()){ // If (sum - goal) exists in map, add its freq to count
             count += prefixSumCount[sum - goal];
