@@ -1,6 +1,6 @@
 //statement- delete 1st node(head)
 //method1(optimal) t.c- O(1)  s.c- O(1)  
-Node *deleteLast(Node* head){
+Node *delete1st(Node* head){
     if(head == nullptr ) return nullptr; //checks if list is empty
 
     Node* temp = head;
@@ -26,11 +26,10 @@ Node *deleteLast(Node* head){
 }
 
 
-//statement- delete node at kth position
+//statement- delete node at kth position (0 based indexing is used for k)
 //method1(optimal) t.c- O(n)  s.c- O(1)
 Node* deleteNode(Node* head, int k){
     if (head == nullptr) return nullptr; //checks if list is empty
-    
     
     // If need to delete head (k = 0 because 0-based indexing)
     if (k == 0) {
