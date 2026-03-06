@@ -81,7 +81,7 @@ Node* deleteElement(Node* head, int val){
     // Go to the node just before the k-th node
     while (temp != nullptr) {
         if(temp->data == val){
-            prev->next = prev->next->next; //
+            prev->next = prev->next->next; //move 'prev' pointer to 1-place forward of node we wanna delete
             delete temp;
             break;
         }
