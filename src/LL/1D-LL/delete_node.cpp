@@ -29,36 +29,31 @@ Node *deleteLast(Node* head){
 //statement- delete node at kth position (0 based indexing is used for k)
 //method1(optimal) t.c- O(n)  s.c- O(1)
 Node* deleteNode(Node* head, int k){
-    if (head == nullptr) return nullptr; //checks if list is empty
-    
-    // If need to delete head (k = 0 because 0-based indexing)
-    if (k == 0) {
+    if(head == nullptr) return nullptr; // If list is empty
+
+    // deleting first node
+    if(k == 0){
         Node* temp = head;
         head = head->next;
         delete temp;
         return head;
     }
-    
+
+    int cnt = 0; //for 1 based indexing just change this cnt=1
     Node* temp = head;
-    Node* prev = nullptr; //to remember past prev value
-    int cnt = 0;
-    // Go to the node just before the k-th node
-    while (temp != nullptr && cnt < k - 1) {
-        if(cnt == k){
-            prev->next = prev->next->next; //move pointer to 1 place forward of temp
-            delete temp;
-            break;
-        }
-        prev = temp; //prev takes curr temp's place 
-        temp = temp->next; //curr temp takes next forward place
-        cnt++; //as we using 0-based indexing in que we cnt afterwards instead of cnting before if statement
+    // Move to k-1th node
+    while(temp != nullptr && cnt < (k-1)){
+        temp = temp->next;
+        cnt++;
     }
 
-    // If k is out of range, do nothing
-    if (temp == nullptr || temp->next == nullptr) {
-        return head;
-    }
+    // If k is out of range
+    if(temp == nullptr || temp->next == nullptr) return head;
 
+    //after loop we are at k-1 position
+    Node* del = temp->next; //store the target node in del
+    temp->next = del->next; //link the prev pointer to 1 place ahead of target 
+    delete del; //delete the target
     return head;
 }
 
