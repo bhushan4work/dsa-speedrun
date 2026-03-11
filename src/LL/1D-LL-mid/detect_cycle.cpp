@@ -19,7 +19,7 @@ bool detectLoop(Node *head){
 }
 
 
-//method2(optimal) t.c- O(n)  s.c- O(1)  
+//method2(optimal) -using tortoise & hare algo t.c- O(n)  s.c- O(1)  
 bool detectLoop(Node *head){
     Node* slow = head;
     Node* fast = head;
