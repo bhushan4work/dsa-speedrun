@@ -1,6 +1,6 @@
 // statement- Given a LL & integer k, task is to delete kth node from end of LL & print updated LL
 
-// method1(brute) t.c- O(l + l-k)  s.c- O(1)
+// method1(brute) t.c- O(n + n-k)  s.c- O(1)
 Node *deleteNthNodeFromEnd(Node *head, int k){
     if (head == nullptr){ // If list is empty, return NULL
         return nullptr;
