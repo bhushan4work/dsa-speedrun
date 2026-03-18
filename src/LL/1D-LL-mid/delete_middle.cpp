@@ -29,7 +29,7 @@ Node *deleteMiddle(Node *head){
 }
 
 
-// method2(optimal) t.c- O(n\2)  s.c- O(1)
+// method2(optimal) -using tortoise & hare algo t.c- O(n\2)  s.c- O(1)
 Node *deleteMiddle(Node *head){
     if (head == nullptr || head->next == nullptr){ // If list has only one node, delete it
         return nullptr;
