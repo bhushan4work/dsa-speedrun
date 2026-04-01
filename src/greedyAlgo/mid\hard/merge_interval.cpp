@@ -1,4 +1,5 @@
-// statement-
+// statement- Given arr intervals[i] = [starti, endi], merge all overlapping intervals, return arr of non-overlapping intervals that cover all intervals in input
+
 
 // method1(brute) t.c- O(nlogn + n^2)  s.c- O(n)
 vector<vector<int>> merge(vector<vector<int>>& intervals) {
