@@ -1,7 +1,7 @@
 // statement- given arr can have duplicate entries, provide the power set. Duplicate subsets cant exist in soln set. Return ans in any seq
 
 
-// method1(brute) t.c- O(2^n)  s.c- O(n)
+// (brute) t.c- O(2^n)  s.c- O(n)
 void backtrack(int start, vector<int> &nums, vector<int> &current, vector<vector<int>> &result){
     result.push_back(current); // Add the curr subset to result
 

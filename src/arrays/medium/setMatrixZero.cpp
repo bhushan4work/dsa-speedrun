@@ -1,6 +1,6 @@
 // statement- if element in matrix is 0 then set its entire column & row to 0 & then return the matrix
 
-// method1(brute) t.c- O(m*n * (m+n) ) s.c- O(1)
+// (brute) t.c- O(m*n * (m+n) ) s.c- O(1)
 void setZeroes(vector<vector<int>> &matrix){
     int m = matrix.size();    // number of rows
     int n = matrix[0].size(); // number of cols (each row have equal no of col & hence [0] is done)
@@ -29,7 +29,7 @@ void setZeroes(vector<vector<int>> &matrix){
     }
 }
 
-// method2(better) t.c- O(2 * m*n) s.c- O(m + n)
+// (better) t.c- O(2 * m*n) s.c- O(m + n)
 void setZeroes(vector<vector<int>> &matrix){
     int m = matrix.size();
     int n = matrix[0].size();
@@ -55,7 +55,7 @@ void setZeroes(vector<vector<int>> &matrix){
     }
 }
 
-// method3(optimal) t.c- O(2 * m*n) s.c- O(1)
+// (optimal) t.c- O(2 * m*n) s.c- O(1)
 void setZeroes(vector<vector<int>> &matrix){
     int m = matrix.size();  
     int n = matrix[0].size(); 

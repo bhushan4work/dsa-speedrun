@@ -1,6 +1,6 @@
 // statement- given an arr, return length of longest sequence of consecutive integers. if any duplicates exist count it only once
 
-// method1(brute) t.c- O(n^2) s.c- O(1)
+// (brute) t.c- O(n^2) s.c- O(1)
 bool linearSearch(vector<int> &a, int num){
     int n = a.size();
     for (int i = 0; i < n; i++){
@@ -24,7 +24,7 @@ int longestConsecutive(vector<int> &nums){
     return longest;
 }
 
-// method2(better) t.c- O(nlogn + n) s.c- O(1)
+// (better) t.c- O(nlogn + n) s.c- O(1)
 int longestConsecutive(vector<int> &nums){
     int n = nums.size();
     sort(nums.begin(), nums.end());
@@ -46,7 +46,7 @@ int longestConsecutive(vector<int> &nums){
     return longest;
 }
 
-// method3(optimal) t.c- O(n) s.c- O(n)
+// (optimal) t.c- O(n) s.c- O(n)
 int longestConsecutive(vector<int> &a){
     int n = a.size();
     int longest = 1; 

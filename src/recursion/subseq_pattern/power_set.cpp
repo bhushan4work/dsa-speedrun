@@ -2,7 +2,7 @@
 //In subseq problem: We use idea of "pick or not pick" for each char in str or element in arr
 
 
-// method1(brute) -using recursion t.c- O(n * 2^n)  s.c- O(n * 2^n)
+// (brute) -using recursion t.c- O(n * 2^n)  s.c- O(n * 2^n)
 void helper(string &s, int index, string &current, vector<string> &result) {
     if (index == s.size()) { // BASE CASE:If we have processed all char
         result.push_back(current);  // store the curr subsequence

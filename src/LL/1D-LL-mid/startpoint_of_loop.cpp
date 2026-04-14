@@ -1,6 +1,6 @@
 // statement- Given the head of LL that may contain a cycle, return the starting point of that cycle. If no cycle exists return null
 
-// method1(brute) t.c- O(n * logn)  s.c- O(n)
+// (brute) t.c- O(n * logn)  s.c- O(n)
 ListNode *detectCycle(ListNode *head){
     unordered_set<ListNode *> visited;
 
@@ -16,7 +16,7 @@ ListNode *detectCycle(ListNode *head){
 }
 
 
-// method2(optimal) - using tortoise & hare algo t.c- O(n)  s.c- O(1)
+// (optimal) - using tortoise & hare algo t.c- O(n)  s.c- O(1)
 ListNode *detectCycle(ListNode *head){
     ListNode *slow = head;
     ListNode *fast = head;

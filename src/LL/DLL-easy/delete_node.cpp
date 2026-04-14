@@ -1,5 +1,5 @@
 //statement- delete 1st node(head)
-//method1(optimal) t.c- O(1)  s.c- O(1)  
+//(optimal) t.c- O(1)  s.c- O(1)  
 Node *delete1st(Node* head){
     if(head == nullptr || head->next == nullptr ) return nullptr; //edge case check for list of size <= 1
 
@@ -13,7 +13,7 @@ Node *delete1st(Node* head){
 
 
 //statement- delete last node(tail)
-//method1(optimal) t.c- O(n)  s.c- O(1)  
+//(optimal) t.c- O(n)  s.c- O(1)  
 Node *deleteLast(Node* head){
     if(head == nullptr || head->next == nullptr ) return nullptr; //edge case check for list of size <= 1
 
@@ -32,7 +32,7 @@ Node *deleteLast(Node* head){
 
 
 //statement- delete node at kth position (0 based indexing is used for k)
-//method1(optimal) t.c- O(n)  s.c- O(1)
+//(optimal) t.c- O(n)  s.c- O(1)
 Node* deleteNode(Node* head, int k){
     if(head == nullptr) return nullptr; // If list is empty
 
@@ -75,7 +75,7 @@ Node* deleteNode(Node* head, int k){
 
 
 //statement- delete a specific node of given value from list (head is given)
-//method1(optimal) t.c- O(n)  s.c- O(1) 
+//(optimal) t.c- O(n)  s.c- O(1) 
 Node* deleteElement(Node* head, Node val){
     if (head == nullptr) return nullptr; //checks if list is empty
     

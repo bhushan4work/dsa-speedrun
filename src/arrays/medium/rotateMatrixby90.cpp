@@ -1,6 +1,6 @@
 // statement- rotate n*n 2D matrix by 90 deg clockwise. Rotation must be done in place i.e input matrix must be modified directly
 
-//method1(brute)  t.c- O(n^2)  s.c- O(n^2)
+//(brute)  t.c- O(n^2)  s.c- O(n^2)
 void rotate(vector<vector<int>> &matrix){
     int n = matrix.size();
     vector<vector<int>> ans(n, vector<int>(n));
@@ -12,7 +12,7 @@ void rotate(vector<vector<int>> &matrix){
     matrix = ans;
 }
 
-//method2(optimal)  t.c- O( (n\2 * n\2) + (n * n\2) )  s.c- O(1)
+//(optimal)  t.c- O( (n\2 * n\2) + (n * n\2) )  s.c- O(1)
 void rotateClockwise(vector<vector<int>> &matrix){
     int n = matrix.size();
     //Transpose the matrix - (diagonal elements remain same while we transpose)

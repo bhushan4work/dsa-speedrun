@@ -5,7 +5,7 @@
 //  -If int is out of 32-bit signed int range [-231, 231 - 1], then round int to remain in range. int < -231 should be rounded to -231, int  > 231 - 1 should be rounded to 231 - 1
 
 
-// method2(optimal) t.c- O(n)  s.c- O(n)
+// (optimal) t.c- O(n)  s.c- O(n)
 int solve(string &s, int i, long long num, int sign){ // Helper recursive fxn
 
     if (i >= s.size() || !isdigit(s[i])){ // Base case: end of string OR non-digit encountered

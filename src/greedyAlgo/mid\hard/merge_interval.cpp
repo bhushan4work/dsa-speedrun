@@ -1,7 +1,7 @@
 // statement- Given arr intervals[i] = [starti, endi], merge all overlapping intervals, return arr of non-overlapping intervals that cover all intervals in input
 
 
-// method1(brute) t.c- O(nlogn + n^2)  s.c- O(n)
+// (brute) t.c- O(nlogn + n^2)  s.c- O(n)
 vector<vector<int>> merge(vector<vector<int>>& intervals) {
     int n = intervals.size();
     sort(intervals.begin(), intervals.end()); //  Sort intervals based on starting time
@@ -26,7 +26,7 @@ vector<vector<int>> merge(vector<vector<int>>& intervals) {
 }
 
 
-// method2(optimal) t.c- O(nlogn + n)  s.c- O(n)
+// (optimal) t.c- O(nlogn + n)  s.c- O(n)
 vector<vector<int>> merge(vector<vector<int>> &intervals){
     sort(intervals.begin(), intervals.end()); // Sort intervals based on starting time
     vector<vector<int>> ans;               // Vector to store final merged intervals

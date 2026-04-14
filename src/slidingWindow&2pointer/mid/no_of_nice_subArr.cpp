@@ -1,7 +1,7 @@
 // statement- arr is called nice if it contains k odd numbers. Find no of nice subarr in given arr
 //  this que is same as binarySubarr with sum, here we just change oddNum to 1, evenNum to 0
 
-// method1(brute) t.c- O(n^2)  s.c- O(1)
+// (brute) t.c- O(n^2)  s.c- O(1)
 int numberOfSubarrays(vector<int> &nums, int k){
     int count = 0;
     for (int i = 0; i < nums.size(); i++){
@@ -19,7 +19,7 @@ int numberOfSubarrays(vector<int> &nums, int k){
 }
 
 
-// method2(better) t.c- O(n)  s.c- O(n)
+// (better) t.c- O(n)  s.c- O(n)
 int numberOfSubarrays(vector<int> &nums, int k){
     unordered_map<int, int> prefixSumCount; // Hashmap to store prefix sum frequencies
     int count = 0, sum = 0;

@@ -1,6 +1,6 @@
 // statement- find index of 1st & last occurrence of target. If target not found then return {-1,-1}
 
-//method1(brute) t.c- O(n)  s.c- O(1)   -normal iteration is done i.e bs not used here
+//(brute) t.c- O(n)  s.c- O(1)   -normal iteration is done i.e bs not used here
 vector<int> searchRange(vector<int> &arr, int target){
   int first = -1 , last = -1;
   for (int i = 0; i < arr.size(); i++){
@@ -14,7 +14,7 @@ vector<int> searchRange(vector<int> &arr, int target){
   return {first, last};
 }
 
-//method2(optimal) t.c- O(2logn)  s.c- O(1)   -using lb & ub
+//(optimal) t.c- O(2logn)  s.c- O(1)   -using lb & ub
 int lowerBound(vector<int> &arr, int x){
   int n = arr.size();
   int low = 0 , high = n - 1;
@@ -61,7 +61,7 @@ vector<int> searchRange(vector<int> &arr, int x){
   return {lb, ub - 1}; // ub gives 1 index greater than last occurence & so we did '-1'
 }
 
-//method3(optimal) t.c- O(2logn)  s.c- O(1)   -without using lb\ub algo, by writing specific bs for this
+//(optimal) t.c- O(2logn)  s.c- O(1)   -without using lb\ub algo, by writing specific bs for this
 int firstOccurrence(vector<int> arr, int x){
   int n = arr.size();
   int low = 0 ,high = n - 1;

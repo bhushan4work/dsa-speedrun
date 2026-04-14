@@ -1,6 +1,6 @@
 // statement- Given arr & an integer k, return the total number of subarrays whose sum equals k
 
-//method1(brute) t.c- O(n^3)  s.c- O(1)
+//(brute) t.c- O(n^3)  s.c- O(1)
 int subarraySum(vector<int> &arr, int k){
     int n = arr.size();
     int count = 0;
@@ -18,7 +18,7 @@ int subarraySum(vector<int> &arr, int k){
     return count;
 }
 
-//method2(better) t.c- O(n^2)  s.c- O(1)
+//(better) t.c- O(n^2)  s.c- O(1)
 int subarraySum(vector<int> &arr, int k){
     int n = arr.size();
     int count = 0;
@@ -34,7 +34,7 @@ int subarraySum(vector<int> &arr, int k){
     return count;
 }
 
-//method3(optimal) t.c- O(n)  s.c- O(n)
+//(optimal) t.c- O(n)  s.c- O(n)
 int subarraySum(vector<int> &arr, int k){
     int n = arr.size();
     unordered_map<int, int> prefixSumCount;  // Map to store frequency of prefix sums

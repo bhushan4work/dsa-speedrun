@@ -1,6 +1,6 @@
 // statement- add 2 nos represented as lists, making a single combined list
 
-// method1(optimal) t.c- O(max(n1,n2))  s.c- O(max(n1,n2))  --(list already reversed, so we just add)
+// (optimal) t.c- O(max(n1,n2))  s.c- O(max(n1,n2))  --(list already reversed, so we just add)
 ListNode *addTwoNumbers(ListNode *l1, ListNode *l2){
     ListNode *dummy = new ListNode(); // Initialize a dummy node as a new node
     ListNode *temp = dummy;
@@ -29,7 +29,7 @@ ListNode *addTwoNumbers(ListNode *l1, ListNode *l2){
 }
 
 
-// method1(optimal) t.c- O(n1 + n2 + max(n1,n2) + max(n1,n2) + max(n1,n2))  s.c- O(1)  --(list not reversed, so we reverse & add)
+// (optimal) t.c- O(n1 + n2 + max(n1,n2) + max(n1,n2) + max(n1,n2))  s.c- O(1)  --(list not reversed, so we reverse & add)
 Node *reverse(Node *head){
     Node *prev = nullptr;
     while (head){

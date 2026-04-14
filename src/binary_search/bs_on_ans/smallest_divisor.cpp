@@ -1,6 +1,6 @@
 // statement- find smallest +ve divisor, such that upon dividing all the elements of the given array by it, the sum of the division's result is <= given limit value
 
-// method1(brute) t.c- O( max(arr) * n)  s.c- O(1)  -normal iteration is done i.e bs not used here
+// (brute) t.c- O( max(arr) * n)  s.c- O(1)  -normal iteration is done i.e bs not used here
 int smallestDivisor(vector<int> &arr, int limit){
     int maxi = *max_element(arr.begin(), arr.end());
     int n = arr.size();
@@ -17,7 +17,7 @@ int smallestDivisor(vector<int> &arr, int limit){
     return -1;
 }
 
-// method2(optimal) t.c- O( log(max(arr)) * n)  s.c- O(1)  -bs used here
+// (optimal) t.c- O( log(max(arr)) * n)  s.c- O(1)  -bs used here
 int sum(vector<int> &arr, int div){
     int sum = 0;
     int n = arr.size();

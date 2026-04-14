@@ -1,7 +1,7 @@
 // statement-  write a program to find the upper bound of x
 // upperBound- It is smallest index where arr[ind] > x. But if such index is not found, it returns n
 
-// method1(brute) t.c- O(n)  s.c- O(1)  -normal iteration is done i.e bs not used here
+// (brute) t.c- O(n)  s.c- O(1)  -normal iteration is done i.e bs not used here
 int upperBound(vector<int> &arr, int x, int n){
     for (int i = 0; i < n; i++){
         if (arr[i] > x){
@@ -11,7 +11,7 @@ int upperBound(vector<int> &arr, int x, int n){
     return n; // If no such element exists, return n
 }
 
-// method2(optimal) t.c- O(logn) base is 2  s.c- O(1)   -bs is done here
+// (optimal) t.c- O(logn) base is 2  s.c- O(1)   -bs is done here
 int upperBound(vector<int> &arr, int x, int n){
     int low = 0, high = n - 1;
     int ans = n;  // Default set to n (if x not found)

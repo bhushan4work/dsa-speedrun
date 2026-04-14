@@ -1,6 +1,6 @@
 // statement- given the head of LL & an integer k, find out whether the k is present in LL or not. Return true if present else false
 
-// method1(optimal) t.c- O(n)  s.c- O(1)
+// (optimal) t.c- O(n)  s.c- O(1)
 int searchInLinkedList(Node<int>* head, int k) {
     Node<int>* current = head; // Pointer to traverse the list
 

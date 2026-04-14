@@ -2,7 +2,7 @@
 // shortest job first algo: scheduling policy that selects waiting process with smallest execution time to execute next
 
 
-// method1(optimal) t.c- O(nlogn + n)  s.c- O(1)
+// (optimal) t.c- O(nlogn + n)  s.c- O(1)
 float calculateAverageWaitTime(vector<int> &jobs){
     sort(jobs.begin(), jobs.end()); // Sort jobs in ascending order (Shortest Job First)
 

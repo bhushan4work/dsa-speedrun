@@ -1,7 +1,7 @@
 // statement- given the head of LL, delete middle node of LL & return modified head. if LL has even no of nodes, delete second middle node
 
 
-// method1(brute) t.c- O(n + n\2)  s.c- O(1)
+// (brute) t.c- O(n + n\2)  s.c- O(1)
 Node *deleteMiddle(Node *head){
     Node *temp = head;
     int n = 0; // variable to hold length of LL
@@ -29,7 +29,7 @@ Node *deleteMiddle(Node *head){
 }
 
 
-// method2(optimal) -using tortoise & hare algo t.c- O(n\2)  s.c- O(1)
+// (optimal) -using tortoise & hare algo t.c- O(n\2)  s.c- O(1)
 Node *deleteMiddle(Node *head){
     if (head == nullptr || head->next == nullptr){ // If list has only one node, delete it
         return nullptr;

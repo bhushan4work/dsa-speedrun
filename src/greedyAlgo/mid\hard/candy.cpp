@@ -2,7 +2,7 @@
 // 1: There must be at least 1 candy for every child.
 // 2: Kids whose scores are higher than their neighbours receive more candies than their neighbours
 
-// method1(brute) t.c- O(n^2)  s.c- O(n)
+// (brute) t.c- O(n^2)  s.c- O(n)
 int candy(vector<int> &ratings){
     int n = ratings.size();    // Total no of children
     vector<int> candies(n, 1); // arr to keep track of candies given to each child, initialized to 1
@@ -31,7 +31,7 @@ int candy(vector<int> &ratings){
 }
 
 
-// method2(better) t.c- O(2n)  s.c- O(n)
+// (better) t.c- O(2n)  s.c- O(n)
 int candy(vector<int> &ratings){
     int n = ratings.size();
     vector<int> candies(n, 1); // Initialize each child with 1 candy
@@ -53,7 +53,7 @@ int candy(vector<int> &ratings){
 }
 
 
-// method3(optimal) t.c- O(n)  s.c- O(1)
+// (optimal) t.c- O(n)  s.c- O(1)
 int candy(vector<int> &ratings){
     int n = ratings.size();
     if (n <= 1) return n;

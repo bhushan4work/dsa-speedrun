@@ -1,7 +1,7 @@
 //statement- given a str s & integer k. Return no of substr that contain exactly k distinct char
 //same as counting binary sum problem where we do : exactly k = (k) - (k-1)
 
-//method1(brute) t.c- O(n^2)  s.c- O(k) 
+//(brute) t.c- O(n^2)  s.c- O(k) 
 int countSubStrings(string s, int k) {
     int cnt = 0; 
     for(int i=0;i<s.size();i++){
@@ -20,7 +20,7 @@ int countSubStrings(string s, int k) {
 }
 
 
-//method2(optimal) t.c- O(n)  s.c- O(k)  
+//(optimal) t.c- O(n)  s.c- O(k)  
 int atMostK(string &s, int x) {
     if (x < 0) return 0; //edge case for k=0 so it doesnt go -ve for k-1 cond
 

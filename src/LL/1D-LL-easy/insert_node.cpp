@@ -1,5 +1,5 @@
 //statement- insert node at head
-//method1(optimal) t.c- O(1)  s.c- O(1)
+//(optimal) t.c- O(1)  s.c- O(1)
 Node* insert1st(Node* head, int val){
     Node* newNode = new Node(val);   // create new node
     newNode->next = head;            // point new node to current head
@@ -7,7 +7,7 @@ Node* insert1st(Node* head, int val){
 }
 
 //statement- insert node at tail
-//method1(optimal) t.c- O(n)  s.c- O(1)
+//(optimal) t.c- O(n)  s.c- O(1)
 Node* insertLast(Node* head, int val) {
 
     Node* newNode = new Node(val);
@@ -29,7 +29,7 @@ Node* insertLast(Node* head, int val) {
 
 
 //statement- insert node at kth position (0 based indexing is used for k)
-//method1(optimal) t.c- O(n)  s.c- O(1)
+//(optimal) t.c- O(n)  s.c- O(1)
 Node* insertAtK(Node* head, int k, int val) {
     Node* newNode = new Node(val);
 
@@ -57,7 +57,7 @@ Node* insertAtK(Node* head, int k, int val) {
 }
 
 //statement- insert node having value x before node of value val (head is given)
-//method1(optimal) t.c- O(n)  s.c- O(1) 
+//(optimal) t.c- O(n)  s.c- O(1) 
 Node* insertBeforeValue(Node* head, int x, int val) {
     if (head == nullptr) return nullptr;
 

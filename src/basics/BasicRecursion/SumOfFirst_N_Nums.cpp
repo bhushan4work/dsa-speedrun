@@ -2,7 +2,7 @@
 //recursion happens in 2 ways namely parameterised & functional
 
 //T.C - O(n) , S.C - O(n)
-//method1 : parameterised way
+//(brute) : parameterised way
 void sum(int i, int s){
     if(i<1){
         cout << s ;
@@ -11,7 +11,7 @@ void sum(int i, int s){
     sum(i-1,s+i);
 }
 
-//method2 : functional
+//(optimal) : functional
 //it keeps on calling same fxn until base condn is true , thereafter the fxn returns
 int summ(int n){
     if(n==0) return 0;

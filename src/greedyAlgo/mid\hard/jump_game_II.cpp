@@ -1,7 +1,7 @@
 //statement- arr represents max no of steps you can jump forward from that element, return min no of steps required to reach end
 
 
-//method1(brute) -using recursion t.c- O(2 ^ n)  s.c- O(n) 
+//(brute) -using recursion t.c- O(2 ^ n)  s.c- O(n) 
 int solve(int i, vector<int>& nums) {
     int n = nums.size();
 
@@ -21,7 +21,7 @@ int jump(vector<int>& nums) {
 }
 
 
-//method2(better) -using dp\memoization t.c- O(n ^ 2)  s.c- O(2n)  
+//(better) -using dp\memoization t.c- O(n ^ 2)  s.c- O(2n)  
 int solve(int i, vector<int>& nums, vector<int>& dp) {
     int n = nums.size();
 
@@ -47,7 +47,7 @@ int jump(vector<int>& nums) {
 }
 
 
-//method3(optimal) -greedy t.c- O(n)  s.c- O(1)
+//(optimal) -greedy t.c- O(n)  s.c- O(1)
 int jump(vector<int>& nums) {
     int n = nums.size();
 

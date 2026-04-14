@@ -1,7 +1,7 @@
 //statement- given the heads of 2 LL, return node at which 2 lists intersect. If the 2 LL have no intersection at all, return null
 
 
-//method1(brute) t.c- O(n1 + n2)  s.c- O(n1) 
+//(brute) t.c- O(n1 + n2)  s.c- O(n1) 
 ListNode *getIntersectionNode(ListNode *headA, ListNode *headB) {
     unordered_set<ListNode*> st;
     
@@ -24,7 +24,7 @@ ListNode *getIntersectionNode(ListNode *headA, ListNode *headB) {
 }
 
 
-//method2(brute) - same like nested forLoop approach t.c- O(n1 * n2)  s.c- O(1) 
+//(brute) - same like nested forLoop approach t.c- O(n1 * n2)  s.c- O(1) 
 ListNode* getIntersectionNode(ListNode* headA, ListNode* headB) {
     while (headA != nullptr) {
         ListNode* temp = headB;
@@ -41,7 +41,7 @@ ListNode* getIntersectionNode(ListNode* headA, ListNode* headB) {
     }
 
 
-//method3(optimal) t.c- O(n1 + n2)  s.c- O(1)
+//(optimal) t.c- O(n1 + n2)  s.c- O(1)
 int getLength(ListNode* head) {
     int len = 0;
     while (head) {
@@ -84,7 +84,7 @@ ListNode *getIntersectionNode(ListNode *headA, ListNode *headB) {
 }
 
 
-//method4(optimal) t.c- O(n1 + n2)  s.c- O(1)
+//(optimal) t.c- O(n1 + n2)  s.c- O(1)
 ListNode *getIntersectionNode(ListNode *headA, ListNode *headB) {
     if(headA == nullptr || headB == nullptr) return nullptr;
 

@@ -1,7 +1,7 @@
 //statement- find all unique combi in arr where nos sum to target. Each number in candidates may only be used once in the combination. duplicates exist in given arr
 
 
-//method1(brute) -using recursion t.c- O(2^n * k)  s.c- O(k * x)
+//(brute) -using recursion t.c- O(2^n * k)  s.c- O(k * x)
 void findCombination(int ind, int target, vector<int>& arr, vector<vector<int>>& ans, vector<int>& ds) {
     if (target == 0) { // Base case: If target becomes 0, we found valid combi
         ans.push_back(ds);  // Add curr combi to result

@@ -3,7 +3,7 @@
 //           Maximize no of students assigned with cookies & output max no
 
 
-//method1(optimal) t.c- O(nlogn + mlogm + n + m)  s.c- O(1)
+//(optimal) t.c- O(nlogn + mlogm + n + m)  s.c- O(1)
 int findContentChildren(vector<int>& g, vector<int>& s) {
     //sort both arr to apply greedy algo
     sort(g.begin(), g.end());

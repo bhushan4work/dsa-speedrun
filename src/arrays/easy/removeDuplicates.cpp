@@ -1,7 +1,7 @@
 //statement- remove duplicate from sorted array
 
 int removeDuplicates(vector<int>& nums) {
-    //method1(brute force) - t.c.- O(nlogn + n)
+    //(brute force) - t.c.- O(nlogn + n)
     set <int> st; //stores unique elements from arr
     for(int i=0;i<nums.size();i++){
         st.insert(nums[i]); //inserts unique elements in set from arr nums
@@ -13,7 +13,8 @@ int removeDuplicates(vector<int>& nums) {
     }
     return index; //returns num of unique elements
 
-    //method2 (optimal) - using 2 pointer , t.c.- O(n) , s.c.- O(1)
+    
+    // (optimal) - using 2 pointer , t.c.- O(n) , s.c.- O(1)
     if(nums.size() == 0) return 0;
 
     int i = 0; //element at 0th index is 1st unique element 

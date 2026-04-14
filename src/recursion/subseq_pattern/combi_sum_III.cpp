@@ -1,7 +1,7 @@
 // statement- Determine all possible set of k nos that can be added together to equal n while meeting following requirements: 1)use numerals 1-9 2)single use of each no
 
 
-// method1(brute) t.c- O(2^9 * k)  s.c- O(k)
+// (brute) t.c- O(2^9 * k)  s.c- O(k)
 void backtrack(int start, int k, int remaining, vector<int> &path, vector<vector<int>>& result){
     if (path.size() == k){ // Base case: if we picked k nos
         if (remaining == 0){ // Check if sum is satisfied

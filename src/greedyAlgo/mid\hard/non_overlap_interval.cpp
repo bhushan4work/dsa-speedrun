@@ -2,7 +2,7 @@
 //  its similar to n_meetings_in_room que, for this que: [1,3],[3,5] is not taken as an overlap
 
 
-//method1(optimal) t.c- O(nlogn + n)  s.c- O(1)
+//(optimal) t.c- O(nlogn + n)  s.c- O(1)
 int eraseOverlapIntervals(vector<vector<int>>& intervals) {
     sort(intervals.begin(), intervals.end(), [](auto &a, auto &b) {  // Sort by endtime to maximize no of intervals we can take
         return a[1] < b[1];

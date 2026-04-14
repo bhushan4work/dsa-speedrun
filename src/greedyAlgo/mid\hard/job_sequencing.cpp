@@ -4,8 +4,7 @@
 // 1st code gives TLE ,to avoid it we need to apply DSU (done in 2nd code) in order to reduce complexity where we replace :
 //  "find next free slot by looping" with "find next free slot in near O(1)"
 
-// method1(optimal) t.c- O(nlogn + n * max deadline)  s.c- O(maxdeadline)
-
+// (optimal) t.c- O(nlogn + n * max deadline)  s.c- O(maxdeadline)
 struct Job{ //structure to represent a job
     int id;     // Job ID
     int dead;   // Deadline
@@ -57,8 +56,7 @@ vector<int> jobSequencing(vector<int> &deadline, vector<int> &profit){
 }
 
 
-// method2(optimal) - applied DSU to avoid TLE t.c- O(nlogn + n)  s.c- O(maxdeadline)
-
+// (optimal) - applied DSU to avoid TLE t.c- O(nlogn + n)  s.c- O(maxdeadline)
 struct Job{ // Structure to represent a job
     int id;     // Job ID
     int dead;   // Deadline

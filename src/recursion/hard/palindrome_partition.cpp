@@ -1,7 +1,7 @@
 // statement- partition given str s such that every substr of partition is palindrome. Return all possible palindrome partitioning of s
 
 
-// method1(brute) t.c- O(2^n * n)  s.c- O(n)
+// (brute) t.c- O(2^n * n)  s.c- O(n)
 bool isPalindrome(string &s, int start, int end){
     while (start <= end){
         if (s[start++] != s[end--])

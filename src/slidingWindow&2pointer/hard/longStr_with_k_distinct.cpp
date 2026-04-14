@@ -1,7 +1,7 @@
 //statement- Find the length of the longest substring with at most k distinct characters
 
 
-//method1(brute) t.c- O(n^2 * log256)  s.c- O(256) 
+//(brute) t.c- O(n^2 * log256)  s.c- O(256) 
 int lengthOfLongestSubstringKDistinct(string s, int k) {
     int maxLen = 0;
 
@@ -19,7 +19,7 @@ int lengthOfLongestSubstringKDistinct(string s, int k) {
     return maxLen;
 }
 
-//method2(better) t.c- O(n + n + log256)  s.c- O(256) 
+//(better) t.c- O(n + n + log256)  s.c- O(256) 
 int totalFruit(vector<int> &arr){
     int l = 0, r = 0;
     int maxLen = 0;
@@ -46,7 +46,7 @@ int totalFruit(vector<int> &arr){
     return maxLen;
 }
 
-//method3(optimal) t.c- O(n + log256)  s.c- O(256) 
+//(optimal) t.c- O(n + log256)  s.c- O(256) 
 int totalFruit(vector<int> &arr){
     int l = 0, r = 0;
     int maxLen = 0;

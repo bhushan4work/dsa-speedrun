@@ -2,7 +2,7 @@
 //           ex arr1[1,2,3,3,4] arr2[1,2,2,3,3,4] - 2 in 1st arr has only one 2 as a partner in 2nd arr ,only 1time 2 will be added but for 3 it will be added 2times as 2 pairs exists
 
 vector<int> findArrayIntersection(vector<int> &arr1, int n, vector<int> &arr2, int m){
-    //method1(brute)-  t.c.- O(n1*n2)  s.c.- O(n2)  ,(this approach gives an TLE error )
+    //(brute)-  t.c.- O(n1*n2)  s.c.- O(n2)  ,(this approach gives an TLE error )
 	vector<int> ans;
     vector<int> visited(m, 0); //arr of size m where each element is initialised to 0, marks indices of arr2 which are already used
 	for(int i=0;i<n;i++){
@@ -18,7 +18,7 @@ vector<int> findArrayIntersection(vector<int> &arr1, int n, vector<int> &arr2, i
 	}
 	return ans;
 
-    //method2(optimal)- 2pointer  t.c.- O(n1+n2)  s.c.- O(n1+n2) to store & return ans 
+    //(optimal)- 2pointer  t.c.- O(n1+n2)  s.c.- O(n1+n2) to store & return ans 
     int i=0;
     int j=0;
     vector<int> ans;

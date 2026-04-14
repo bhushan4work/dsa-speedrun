@@ -1,6 +1,6 @@
 // statement- str consisting of digits from 2-9. Return all possible letter combi that number can represent
 
-// method1(brute) t.c- O(4^n * n)  s.c- O(n)
+// (brute) t.c- O(4^n * n)  s.c- O(n)
 void backtrack(int index, string &digits, string &path, vector<string> &result,  vector<string>& mapping){
     if (index == digits.size()){ // Base case: if curr combi length == digits length
         result.push_back(path);

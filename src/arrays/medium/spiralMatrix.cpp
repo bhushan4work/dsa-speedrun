@@ -3,7 +3,7 @@
 //              starting from the top-left corner & moving inward, layer by layer, until the center is reached
 // note: this problem has only 1 soln & its an implementation bases que
 
-// method1(optimal) t.c- O(m*n) s.c- O(1)
+// (optimal) t.c- O(m*n) s.c- O(1)
 vector<int> spiralOrder(vector<vector<int>> &matrix){
     vector<int> ans;
     int m = matrix.size(); //rows

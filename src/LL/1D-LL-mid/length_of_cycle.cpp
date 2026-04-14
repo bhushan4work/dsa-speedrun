@@ -1,7 +1,7 @@
 // statement- Given the head of LL, determine length of loop present in LL. If no loop present, return 0
 
 
-// method1(brute) t.c- O(n * logn)  s.c- O(n)
+// (brute) t.c- O(n * logn)  s.c- O(n)
 int lengthOfLoop(Node *head){
     unordered_map<Node *, int> visitedNodes;
     Node *temp = head;
@@ -24,7 +24,7 @@ int lengthOfLoop(Node *head){
 }
 
 
-// method2(optimal) -using tortoise & hare algo t.c- O(n)  s.c- O(1)
+// (optimal) -using tortoise & hare algo t.c- O(n)  s.c- O(1)
 int countLoopLength(Node* meetingPoint) {
     Node* temp = meetingPoint; // store meeting point in temp node
     int length = 1;

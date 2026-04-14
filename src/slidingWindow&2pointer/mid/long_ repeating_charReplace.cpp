@@ -1,7 +1,7 @@
 // statement- any char in str can be selected & changed to any other uppercase char. This can be performed up to k times. return length of longest substr that contains same letter
 // here we need to replace k char's in given str with any other char to get maxLen. so we'll only change char's having lesser freq in the str
 
-// method1(brute) t.c- O(n^2 * 26)  s.c- O(26)
+// (brute) t.c- O(n^2 * 26)  s.c- O(26)
 int characterReplacement(string s, int k){
     int maxLength = 0;
     for (int i = 0; i < s.length(); i++){
@@ -27,7 +27,7 @@ int characterReplacement(string s, int k){
     return maxLength;
 }
 
-// method2(better) t.c- O(n + n + 26)  s.c- O(26)
+// (better) t.c- O(n + n + 26)  s.c- O(26)
 int characterReplacement(string s, int k){
     unordered_map<char, int> freq; // Map to count frequency of characters in current window
     int l = 0, r = 0;
@@ -59,7 +59,7 @@ int characterReplacement(string s, int k){
     return maxLen;
 }
 
-// method3(optimal) t.c- O(n + 26)  s.c- O(26)
+// (optimal) t.c- O(n + 26)  s.c- O(26)
 int characterReplacement(string s, int k){
     unordered_map<char, int> freq; // Map to count frequency of characters in current window
     int l = 0, r = 0;

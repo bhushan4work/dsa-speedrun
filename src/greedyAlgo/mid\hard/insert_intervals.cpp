@@ -1,7 +1,7 @@
 // statement- Insert newInterval arr into intervals arr such that intervals is still sorted in ascending order by starti & intervals still doesnt have any overlapping intervals (merge overlapping intervals if necessary)
 
 
-// method1(optimal) t.c- O(n)  s.c- O(n)
+// (optimal) t.c- O(n)  s.c- O(n)
 vector<vector<int>> insert(vector<vector<int>> &intervals, vector<int> &newInterval){
     int n = intervals.size(); // Total no of existing intervals
     vector<vector<int>> res;  // Result vector to store final merged intervals

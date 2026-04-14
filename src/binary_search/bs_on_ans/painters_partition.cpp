@@ -2,7 +2,7 @@
 //            each unit of board takes 1 unit of time to paint. return area of min time to paint all n boards
 
 
-// method1(brute) t.c- O(n * (sum(arr) - max(arr)+1))  s.c- O(1)  -normal iteration is done i.e bs not used here
+// (brute) t.c- O(n * (sum(arr) - max(arr)+1))  s.c- O(1)  -normal iteration is done i.e bs not used here
 int countPainters(vector<int> &arr, int time){
     int painters = 1;
     long long currSumOfTime = 0;
@@ -38,7 +38,7 @@ int findLargestMinDistance(vector<int> &arr, int k){
 }
 
 
-// method2(optimal) t.c- O( n * log(sum(arr) - max(arr)+1) )  s.c- O(1)  -bs used here
+// (optimal) t.c- O( n * log(sum(arr) - max(arr)+1) )  s.c- O(1)  -bs used here
 int countPainters(vector<int> &arr, int time){
     long long currSumOfTime = 0;
     int painters = 1;

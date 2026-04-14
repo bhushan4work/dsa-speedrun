@@ -1,7 +1,7 @@
 //statement- task is to add 1 to the value represented by LL & return head of LL containing final value
 
 
-//method1(brute) t.c- O(n + n + n)  s.c- O(1)
+//(brute) t.c- O(n + n + n)  s.c- O(1)
 Node* reverseList(Node* head) {
     Node* prev = nullptr;
     Node* curr = head;
@@ -45,7 +45,7 @@ Node* addOne(Node* head) {
 }
 
 
-//method2(optimal) using recursion t.c- O(n)  s.c- O(n) for storing recursive stack
+//(optimal) using recursion t.c- O(n)  s.c- O(n) for storing recursive stack
 int addOneUtil(Node* temp) {
     if (temp == nullptr) return 1; //Base case: when reaching beyond last node, return carry=1
         

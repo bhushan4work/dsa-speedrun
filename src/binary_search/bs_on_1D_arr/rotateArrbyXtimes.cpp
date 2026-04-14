@@ -1,7 +1,7 @@
 //statement- sorted arr is rotated between 1 to N times which is unknown. Find how many times the arr has been rotated
 //approach- index of min in rotated arr == amt of time it is rotated 
 
-//method1(brute) t.c- O(n)  s.c- O(1)  -normal iteration is done i.e bs not used here
+//(brute) t.c- O(n)  s.c- O(1)  -normal iteration is done i.e bs not used here
 int findMin(vector<int> &arr){
     int mini = INT_MAX;
     int miniIndex = 0;
@@ -14,7 +14,7 @@ int findMin(vector<int> &arr){
     return miniIndex;
 }
 
-//method2(optimal) t.c- O(logn)  s.c- O(1)  -bs is used here
+//(optimal) t.c- O(logn)  s.c- O(1)  -bs is used here
 int findMin(vector<int> &arr){
     int low = 0, high = arr.size() - 1;
     int mini = INT_MAX;
@@ -49,8 +49,8 @@ int findMin(vector<int> &arr){
     return miniIndex ;
 }
 
-//FAQ's- same above question with duplicate elements
 
+//FAQ's- same above question with duplicate elements
 //(optimal) t.c- O(logn)  s.c- O(1)  -bs used here
 int findKRotation(vector<int> &arr){
     int low = 0, high = arr.size() - 1;

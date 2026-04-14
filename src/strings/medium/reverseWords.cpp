@@ -1,6 +1,6 @@
 // statement- return a str with its words in reverse order, concatenated by a single space
 
-// method1(brute) t.c- O(n)  s.c- O(n)
+// (brute) t.c- O(n)  s.c- O(n)
 string reverseWords(string s){
     vector<string> words;  // Vector to store words
     string word = ""; // Temporary str to store a single word
@@ -34,7 +34,7 @@ string reverseWords(string s){
 }
 
 
-// method2(optimal) t.c- O(n)  s.c- O(1)
+// (optimal) t.c- O(n)  s.c- O(1)
 string reverseWords(string s){
     string ans = "";
     reverse(s.begin(), s.end()); //reverse whole str

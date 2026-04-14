@@ -1,6 +1,6 @@
 // statement- return largest odd integer (as string) i.e substring. if no odd digit found return ""
 
-// method1(optimal) t.c- O(n)  s.c- O(1)
+// (optimal) t.c- O(n)  s.c- O(1)
 string largestOddNumber(string arr){
     //find odd digit from end and return whole substring from start to this end 
     for (int i = arr.size() - 1; i >= 0; i--){ 

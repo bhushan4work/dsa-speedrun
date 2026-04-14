@@ -5,7 +5,7 @@ vector<int> rotateArray(vector<int>arr, int k) {
     int n = arr.size();
     k = k % n; //if k is greater than n ,we only need to rotate the remainder
     
-    //method1(brute) t.c.- O(k+ (n-k) + k ) = O(n+k) , s.c.-(extra space)- O(k)
+    //(brute) t.c.- O(k+ (n-k) + k ) = O(n+k) , s.c.-(extra space)- O(k)
     //for left rotation
     int temp[n]; //or vector<int> temp(k);
     for(int i=0;i<k;i++){ 
@@ -32,7 +32,8 @@ vector<int> rotateArray(vector<int>arr, int k) {
     }
     return arr;
     
-    //method2(optimal approach) t.c.- O(k + (n-k) + n)  , s.c.-(extra space)- O(1)
+    
+    //(optimal approach) t.c.- O(k + (n-k) + n)  , s.c.-(extra space)- O(1)
     //reverse(a,k) → reverse(k,n) → reverse(a, n)
     //for left rotation - (for codeStudio que)
     reverse(arr.begin(),arr.begin()+k); //last element i.e arr+k is exclusive(i.e < arr+k) 

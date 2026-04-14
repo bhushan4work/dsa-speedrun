@@ -1,7 +1,7 @@
 // statement- find out least-weight capacity so that you can ship all the packages within 'd' days. ith day consists of arr[i] wt
 // search range - [maxWt of arr to sum of all wt's]
 
-// method1(brute) t.c- O((sumOfWt-maxWt)* n) s.c- O(1)  -normal iteration is done i.e bs not used here
+// (brute) t.c- O((sumOfWt-maxWt)* n) s.c- O(1)  -normal iteration is done i.e bs not used here
 int findDays(vector<int> &arr, int capacity){
     int days = 1;
     int currentLoad = 0;
@@ -33,7 +33,7 @@ int shipWithinDays(vector<int> &weights, int d){
 }
 
 
-// method2(optimal) t.c- O(log(sumOfWt-maxWt)* n)  s.c- O(1)  -bs used here
+// (optimal) t.c- O(log(sumOfWt-maxWt)* n)  s.c- O(1)  -bs used here
 int findDays(vector<int> &arr, int capacity){
     int days = 1;
     int currentLoad = 0; // tracks currentLoad for a day

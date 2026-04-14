@@ -1,7 +1,7 @@
 // statement- arr denotes position of stalls. 'k' denotes no of aggressive cows. assign stalls to 'k' cows such that the min distance betn any 2 of them is the max possible
 //            find the max possible min distance
 
-// method1(brute) t.c- O( nlogn + (n * arr(max-min) )  s.c- O(1)  -normal iteration is done i.e bs not used here
+// (brute) t.c- O( nlogn + (n * arr(max-min) )  s.c- O(1)  -normal iteration is done i.e bs not used here
 bool canPlace(vector<int> &arr, int cows, int d){
     int count = 1;
     int lastPos = arr[0]; // Place the first cow at the first stall
@@ -33,7 +33,7 @@ int aggressiveCows(vector<int> &stalls, int cows){
 }
 
 
-// method2(optimal) t.c- O( nlogn + (n * log(arr(max-min))) )  s.c- O(1)  -bs used here
+// (optimal) t.c- O( nlogn + (n * log(arr(max-min))) )  s.c- O(1)  -bs used here
 bool canPlace(vector<int> &arr, int cows, int d){
     int count = 1;
     int lastPos = arr[0];  // Place first cow at the first stall

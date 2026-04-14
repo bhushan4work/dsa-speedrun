@@ -1,11 +1,11 @@
 //statement- Given an arr consisting of only 0,1,or2. Sort the arr in non-decreasing order. The sorting must be done in-place, without making copy of original arr.
 
-//method1(brute) t.c- O(nlogn) s.c- O(logn)
+//(brute) t.c- O(nlogn) s.c- O(logn)
 void sortColors(vector<int>& arr) {
     sort(arr.begin(), arr.end());
 }
 
-//method2(better)- t.c-  O(2n) s.c- O(1)
+//(better)- t.c-  O(2n) s.c- O(1)
 void sortColors(vector<int> &arr){
     int n = arr.size();
     int cnt0 = 0, cnt1 = 0, cnt2 = 0; // initialize counter
@@ -30,7 +30,7 @@ void sortColors(vector<int> &arr){
     }
 }
 
-//method3(optimal) using Dutch-NationalFlag-Algorithm  t.c- O(n)  s.c- O(1)
+//(optimal) using Dutch-NationalFlag-Algorithm  t.c- O(n)  s.c- O(1)
 void sortColors(vector<int>& arr) {
     int low=0, mid=0, high=arr.size()-1;
     while(mid <= high){

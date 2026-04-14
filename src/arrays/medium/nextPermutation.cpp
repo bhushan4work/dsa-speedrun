@@ -2,7 +2,7 @@
 //            If such an arrangement is not possible, it must rearrange to lowest possible order(i.e. sorted in ascending)
 //approach: generate all combinations in sorted form(using recursion), do a linear search of input, pick the next index
 
-// method1(brute)  t.c- O( n!(combinations)*n(length) )  s.c- O(n!*n)
+// (brute)  t.c- O( n!(combinations)*n(length) )  s.c- O(n!*n)
 vector<int> nextPermutation(vector<int> &nums){
     vector<vector<int>> all;  //'all' stores every permutation of arr & each permutation is vector<int>
     vector<int> original = nums; //stores copy of original nums arr, will need this during comparing as we sort it below & modify it
@@ -25,7 +25,7 @@ vector<int> nextPermutation(vector<int> &nums){
 }
 
 
-// method2(optimal)  t.c- O(3n)  s.c- O(n) if said that modifying arr takes extraSpace by interviewer else O(1)
+// (optimal)  t.c- O(3n)  s.c- O(n) if said that modifying arr takes extraSpace by interviewer else O(1)
 void nextPermutation(vector<int> &arr){
     int ind = -1;
     int n = arr.size();

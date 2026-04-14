@@ -1,7 +1,7 @@
 // statement- return all binary str of length n that dont contain consecutive 1s
 
 
-// method1(brute) -using recursion t.c- O(2^n)  s.c- O(1) -gives tle, can be solved optimally with dp
+// (brute) -using recursion t.c- O(2^n)  s.c- O(1) -gives tle, can be solved optimally with dp
 void solve(int n, string &curr, vector<string> &ans){
     if (curr.size() == n){ // base case
         ans.push_back(curr);

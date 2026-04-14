@@ -1,6 +1,6 @@
 //statement- given 2 str s,t of size m,n ;return min window substr of s such that every char in t (including duplicates) is included in the window of s
 
-//method1(brute) t.c- O(n^2)  s.c- O(256) 
+//(brute) t.c- O(n^2)  s.c- O(256) 
 string minWindow(string s, string t) {
     int n = s.size();
     int m = t.size();
@@ -35,7 +35,7 @@ string minWindow(string s, string t) {
 }
 
 
-//method2(optimal) t.c- O(n)  s.c- O(256)  
+//(optimal) t.c- O(n)  s.c- O(256)  
 string minWindow(string s, string t) {
     if (t.size() > s.size()) return ""; // handling edge case
     int n = s.size();

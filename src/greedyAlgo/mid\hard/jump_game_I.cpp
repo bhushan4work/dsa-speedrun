@@ -1,6 +1,6 @@
 // statement- arr represents max no of steps you can jump forward from that element, return true if we can reach last index starting from the first index. Otherwise, return false
 
-// method1(optimal) t.c- O(n)  s.c- O(1)
+// (optimal) t.c- O(n)  s.c- O(1)
 bool canJump(vector<int> &nums){
     int maxIndex = 0; //farthest index we are aloud to reach\move 
 

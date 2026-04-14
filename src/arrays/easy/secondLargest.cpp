@@ -1,7 +1,7 @@
 //statemeent- find the 2nd smallest & 2nd largest element in array. Print ‘-1’ in the event that either of them doesn’t exist.
 
 vector<int> getSecondOrderElements(int n, vector<int> a) {
-    //method1(bruteForce) t.c.- nlogn + n    
+    //(bruteForce) t.c.- nlogn + n    
     sort(a.begin(), a.end()); //sort the arr
     int largest = a[n - 1];
     int slargest = -1;  //if arr contains -ve num,take slargest=INT_MIN or smallest value possible
@@ -13,7 +13,7 @@ vector<int> getSecondOrderElements(int n, vector<int> a) {
     }
     return slargest;
 
-    //method2-(better approach) t.c.- O(n+n)
+    //-(better approach) t.c.- O(n+n)
     int largest = a[0];
     for(int i=0;i<arr.size();i++){
         if(a[i] > largest){
@@ -28,7 +28,7 @@ vector<int> getSecondOrderElements(int n, vector<int> a) {
     }
     return slargest;
 
-    //method3(best approach)
+    //(best approach)
     //2nd largest t.c.- O(n)
     int largest = a[0];
     int slargest = -1; //take smallest value possible or INT_MIN

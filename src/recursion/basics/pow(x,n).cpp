@@ -1,7 +1,7 @@
 // statement- Implement power fxn pow(x, n) , which calculates x raised to n
 
 
-// method1(brute) t.c- O(n)  s.c- O(1)
+// (brute) t.c- O(n)  s.c- O(1)
 double myPow(double x, int n){
     if (n == 0 || x == 1.0) return 1; // Base case: any number to the power of 0 is 1
 
@@ -20,8 +20,7 @@ double myPow(double x, int n){
 }
 
 
-// method2(optimal) -using recursion t.c- O(n)  s.c- O(n)
-
+// (optimal) -using recursion t.c- O(n)  s.c- O(n)
 // Function to calculate power of x^n
 double power(double x, long n){
     if (n == 0) return 1.0; // Base case: anything raised to 0 is 1

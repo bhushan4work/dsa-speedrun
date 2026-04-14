@@ -1,7 +1,7 @@
 // statement- generate all combinations of well-formed parentheses of n pair of '()'
 
 
-// method1(brute) -using recursion t.c- O(Cn * n)  s.c- O(Cn * n + n) i.e for output + recursive stack space
+// (brute) -using recursion t.c- O(Cn * n)  s.c- O(Cn * n + n) i.e for output + recursive stack space
 void backtrack(string curr, int open, int close, int n, vector<string>& res) {
     
     if (curr.length() == 2*n) { // BASE CASE: If curr str length becomes 2*n, it means we used all brackets

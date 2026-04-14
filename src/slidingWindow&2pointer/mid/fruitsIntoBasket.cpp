@@ -2,7 +2,7 @@
 //            return length of total fruits including both baskets
 
 
-// method1(brute) t.c- O(n^2)  s.c- O(1)
+// (brute) t.c- O(n^2)  s.c- O(1)
 // as we have maxbasket to fill fruits = 2 so size of map will not go more than that & so it doesnt affect t.c & s.c
 int totalFruit(vector<int> &arr){
     int maxLen = 0;
@@ -23,7 +23,7 @@ int totalFruit(vector<int> &arr){
     return maxLen;
 }
 
-// method2(better) t.c- O(n+n)  s.c- O(1)
+// (better) t.c- O(n+n)  s.c- O(1)
 // as we have maxbasket to fill fruits = 2 so size of map will not go more than that & so it doesnt affect t.c & s.c
 int totalFruit(vector<int> &arr){
     int l = 0, r = 0;
@@ -51,7 +51,7 @@ int totalFruit(vector<int> &arr){
     return maxLen;
 }
 
-// method3(optimal) t.c- O(n)  s.c- O(1)
+// (optimal) t.c- O(n)  s.c- O(1)
 // as we have maxbasket to fill fruits = 2 so size of map will not go more than that & so it doesnt affect t.c & s.c
 int totalFruit(vector<int> &arr){
     int l = 0, r = 0;

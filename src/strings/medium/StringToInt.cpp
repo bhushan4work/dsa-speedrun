@@ -6,7 +6,7 @@
 //  Return the integer as the final result
 
 
-//method1(optimal) t.c- O(n + n)  s.c- O(1)
+//(optimal) t.c- O(n + n)  s.c- O(1)
 int myAtoi(string s){
     int i = 0;
     int sign = 1;

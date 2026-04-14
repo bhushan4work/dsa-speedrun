@@ -1,6 +1,6 @@
 // statement- find 'kth' positive integer missing from arr
 
-// method1(brute) t.c- O(n)  s.c- O(1)  -normal iteration is done i.e bs not used here
+// (brute) t.c- O(n)  s.c- O(1)  -normal iteration is done i.e bs not used here
 int missingK(vector<int> vec, int n, int k){
     for (int i = 0; i < n; i++){
         if (vec[i] <= k){
@@ -13,7 +13,7 @@ int missingK(vector<int> vec, int n, int k){
     return k; // Return final val of k which is the missing num
 }
 
-// method2(optimal) t.c- O(logn)  s.c- O(1)  -bs used here
+// (optimal) t.c- O(logn)  s.c- O(1)  -bs used here
 int missingK(vector<int> vec, int n, int k){
     int low = 0, high = n - 1;
 

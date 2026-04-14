@@ -2,7 +2,7 @@
 //                    Return the maximum profit you can achieve from this transaction. If you cannot achieve any profit, return 0.
 //this problem comes under dynamic programming as it remembers the past
 
-// method1(brute)-  t.c- O(n^2) s.c- O(1)
+// (brute)-  t.c- O(n^2) s.c- O(1)
 int maxProfit(vector<int> &prices){
     int maxProfit = 0;
     for (int i = 0; i < prices.size(); i++){
@@ -14,7 +14,7 @@ int maxProfit(vector<int> &prices){
     return maxProfit;
 }
 
-// method2(optimal)-  t.c- O(n) s.c- O(1)
+// (optimal)-  t.c- O(n) s.c- O(1)
 int maxProfit(vector<int> &prices){
     int mini = prices[0];  //assume 1st element as minimum
     int maxProfit = 0;

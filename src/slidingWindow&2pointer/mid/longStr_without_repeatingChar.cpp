@@ -1,6 +1,6 @@
 //statement- Find length of longest substring without repeating char's
 
-//method1(brute) t.c- O(n^2)  s.c- O(1) 
+//(brute) t.c- O(n^2)  s.c- O(1) 
 int longestNonRepeatingSubstring(string &s) {
     int n = s.size(); 
     int maxLen = 0; //stores maxLen 
@@ -19,7 +19,7 @@ int longestNonRepeatingSubstring(string &s) {
     return maxLen; 
 }
 
-//method2(optimal) t.c- O(n)  s.c- O(1)  
+//(optimal) t.c- O(n)  s.c- O(1)  
 int longestNonRepeatingSubstring(string& s) {
     int n = s.size();
     int HashLen = 256; 

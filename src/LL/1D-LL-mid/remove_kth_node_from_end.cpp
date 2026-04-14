@@ -1,6 +1,6 @@
 // statement- Given a LL & integer k, task is to delete kth node from end of LL & print updated LL
 
-// method1(brute) t.c- O(n + n-k)  s.c- O(1)
+// (brute) t.c- O(n + n-k)  s.c- O(1)
 Node *deleteNthNodeFromEnd(Node *head, int k){
     if (head == nullptr){ // If list is empty, return NULL
         return nullptr;
@@ -39,7 +39,7 @@ Node *deleteNthNodeFromEnd(Node *head, int k){
 }
 
 
-// method2(optimal) -using tortoise & hare algo  t.c- O(n)  s.c- O(1)
+// (optimal) -using tortoise & hare algo  t.c- O(n)  s.c- O(1)
 Node *deleteNthNodeFromEnd(Node *head, int k){
     // Initialize slow and fast pointers at head
     Node *slow = head;

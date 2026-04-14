@@ -1,6 +1,6 @@
 // statement- find and return sqrt of n. If ‘n’ is not a perfect square, then return the floor value of sqrt(n)
 
-// method1(brute) t.c- O(n)  s.c- O(1)  -normal iteration is done i.e bs not used here
+// (brute) t.c- O(n)  s.c- O(1)  -normal iteration is done i.e bs not used here
 int floorSqrt(int n){
     int ans = 0;
 
@@ -15,7 +15,7 @@ int floorSqrt(int n){
     return ans;
 }
 
-// method2(optimal) t.c- O(logn)  s.c- O(1)  -bs used here
+// (optimal) t.c- O(logn)  s.c- O(1)  -bs used here
 int floorSqrt(int n){
     if (n == 0 || n == 1) return n;
     int low = 1, high = n;

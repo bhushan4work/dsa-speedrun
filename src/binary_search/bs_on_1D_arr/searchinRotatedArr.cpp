@@ -3,7 +3,7 @@
 //  in this given rotated arr , either the left or right half will be sorted from mid so we check for such side & then eliminate accordingly
 
 
-//method1(brute) t.c- O(n)  s.c- O(1)  -normal iteration is done i.e bs not used here
+//(brute) t.c- O(n)  s.c- O(1)  -normal iteration is done i.e bs not used here
 int search(vector<int> &arr, int target){
     for (int i = 0; i < arr.size(); i++){
         if (arr[i] == target){
@@ -13,7 +13,7 @@ int search(vector<int> &arr, int target){
     return -1;
 }
 
-//method2(optimal) t.c- O(logn)  s.c- O(1)  -bs algo used here
+//(optimal) t.c- O(logn)  s.c- O(1)  -bs algo used here
 int search(vector<int> &nums, int target){
     int low = 0;
     int high = nums.size() - 1;

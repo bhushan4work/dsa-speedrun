@@ -1,7 +1,7 @@
 //statement- Given two integers N1 and N2, find their greatest common divisor
 
 int main(){
-    //method1
+    //(brute)
     //O( min(n1,n2) ) - T.C
     int n1 , n2 ;
     cin >> n1 ;
@@ -13,7 +13,7 @@ int main(){
         }
     }
 
-    //method2
+    //(optimal)
     //when log is taken in T.C ? whenever there is division,num of iterations is in terms of log
     //also as n1 & n2 changes each time we cant give it a base so take it as a variable
     //T.C - O( log base t min(n1,n2))  where t is variable according to input

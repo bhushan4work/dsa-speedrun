@@ -1,6 +1,6 @@
 // statement-  given the head of a LL, print length of the LL
 
-// method1(optimal) t.c- O(n)  s.c- O(1)
+// (optimal) t.c- O(n)  s.c- O(1)
 int lengthOfLinkedList(Node *head){
     int count = 0;
 

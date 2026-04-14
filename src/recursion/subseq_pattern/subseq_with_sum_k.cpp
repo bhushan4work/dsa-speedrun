@@ -1,6 +1,6 @@
 //statement- Return no of non-empty subseq of nums such that sum of all elements in subseq = k
 
-//method1(brute) -using recursion t.c- O(2^n)  s.c- O(n) -gives TLE
+//(brute) -using recursion t.c- O(2^n)  s.c- O(n) -gives TLE
 int func(int ind, int sum, vector<int> &nums) {
     if (ind == nums.size()) {  // reached end → check if valid
         return (sum == 0) ? 1 : 0;
@@ -19,9 +19,10 @@ int countSubsequenceWithTargetSum(vector<int>& nums, int target) {
 }
 
 
+
 //statement- Return true if there exist subseq such that sum of all elements in subseq = k else false
 
-//method1(brute) -using recursion t.c- O(2^n)  s.c- O(n) -gives TLE
+//(brute) -using recursion t.c- O(2^n)  s.c- O(n) -gives TLE
 bool func(int ind, int sum, vector<int> &nums) {
     if (sum == 0) return true; // if target achieved
 

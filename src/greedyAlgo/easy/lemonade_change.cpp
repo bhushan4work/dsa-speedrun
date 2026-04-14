@@ -1,7 +1,7 @@
 // statement- arr represents queue of customer & value of bills they hold, determine if its possible to provide correct change to each customer. Customers can only pay with 5$\10$\20$ bills and we initially do not have any change at hand.
 //            return true, if its possible to provide correct change for each customer else false
 
-// method1(optimal) t.c- O(n)  s.c- O(1)
+// (optimal) t.c- O(n)  s.c- O(1)
 bool lemonadeChange(vector<int> &bills){
     int five = 0; // Counter for $5 bills
     int ten = 0;  // Counter for $10 bills

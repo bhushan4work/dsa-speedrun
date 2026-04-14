@@ -1,6 +1,6 @@
 // statement- given a binary arr & an integer goal. Return no of subarr whose sum is == goal
 
-// method1(brute) t.c- O(n^2)  s.c- O(1)
+// (brute) t.c- O(n^2)  s.c- O(1)
 int numSubarraysWithSum(vector<int> &nums, int goal){
     int count = 0;
     for (int i = 0; i < nums.size(); i++){
@@ -18,7 +18,7 @@ int numSubarraysWithSum(vector<int> &nums, int goal){
 }
 
 
-// method2(better) t.c- O(n)  s.c- O(n)
+// (better) t.c- O(n)  s.c- O(n)
 int numSubarraysWithSum(vector<int> &nums, int goal){
     unordered_map<int, int> prefixSumCount; // Hashmap to store prefix sum frequencies
     int count = 0, sum = 0;
@@ -37,7 +37,7 @@ int numSubarraysWithSum(vector<int> &nums, int goal){
 }
 
 
-// method3(optimal) t.c- O(2 * 2n)  s.c- O(1)
+// (optimal) t.c- O(2 * 2n)  s.c- O(1)
 int numSubarraysWithSum(vector<int> &nums, int goal){
     // Return difference between subarrays with sum  <=goal & <=(goal - 1)
     return atMost(nums, goal) - atMost(nums, goal - 1);

@@ -4,7 +4,7 @@ int main(){
     int n ;
     cin >> n ;
 
-    //method1
+    //(brute)
     //below loop runs for n iterations, T.C is O(n)
     for(int i =1 ;i <=n ;i++){
         if(n%i==0){
@@ -12,7 +12,8 @@ int main(){
         }
     }
 
-    //method2
+
+    //(optimal)
     //suppose n=36 so its factors are 1*36, 2*18 ,etc but after 6*6 the factors repeat itself
     // so we wanna print till 6*6 only as we get all factors .
     vector<int> list;     //list that stores values
@@ -31,5 +32,4 @@ int main(){
     for(int it : list ){
        cout << it << " " ;
     }
-    //for total T.C ,add all T.C
 }

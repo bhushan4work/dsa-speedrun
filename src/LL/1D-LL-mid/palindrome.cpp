@@ -1,7 +1,7 @@
 //statement- given the head of LL. check whether LL values form a palindrome or not. return true if it forms palindrome else false
 
 
-//method1(brute) t.c- O(n)  s.c- O(n) 
+//(brute) t.c- O(n)  s.c- O(n) 
 bool isPalindrome(Node* head) {
     stack<int> st;
     Node* temp = head;
@@ -25,7 +25,7 @@ bool isPalindrome(Node* head) {
 }
 
 
-//method2(optimal) -using tortoise & hare algo t.c- O(n)  s.c- O(1)
+//(optimal) -using tortoise & hare algo t.c- O(n)  s.c- O(1)
 Node* reverseLinkedList(Node* head) {
     if (head == NULL || head->next == NULL) { // Check if the list is empty or has only one node
         return head; 

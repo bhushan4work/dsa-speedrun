@@ -1,6 +1,6 @@
 // statement- beauty of str: difference betn most frequent char & least freq char. return sum of beauty values of all possible substr
 
-// method1(optimal) t.c- O(n^2)  s.c- O(26)
+// (optimal) t.c- O(n^2)  s.c- O(26)
 int beautySum(string s){
     int ans = 0;
 

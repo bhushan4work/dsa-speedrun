@@ -1,13 +1,13 @@
 //statement- Given an integer N, write a program to print numbers from N to 1
 
-//method1
+//(brute)
 void func(int i, int n){
     if(i<1) return;
     cout << i ;
     func(i-1,n);
 }
     
-//method2 : by backtracking i.e using '+' rather than '-'
+//(optimal) : by backtracking i.e using '+' rather than '-'
 void funcc(int i, int n){
     if(i>n) return ;
     funcc(i+1, n);

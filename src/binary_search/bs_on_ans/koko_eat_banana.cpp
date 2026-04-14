@@ -2,7 +2,7 @@
 // piles = [3, 6, 7] means - 1st pile → 3 bananas, 2nd pile → 6 bananas & so on ...
 // note: koko doesnt eat one pile per hour she may take multiple hours per pile
 
-// method1(brute) t.c- O( n * max(arr) )  s.c- O(1)  -normal iteration is done i.e bs not used here, (will give TLE error)
+// (brute) t.c- O( n * max(arr) )  s.c- O(1)  -normal iteration is done i.e bs not used here, (will give TLE error)
 int findMax(vector<int> &arr){  //finds max in arr
     int n = arr.size();
     int maxi = 0;
@@ -31,7 +31,7 @@ int minEatingSpeed(vector<int> &arr, int h){   //gives final ans for speed of ea
     return maxVal; //when counted hrs > req hrs 
 }
 
-// method2(optimal) t.c- O( n * log(max(arr) )  s.c- O(1)  -bs used here
+// (optimal) t.c- O( n * log(max(arr) )  s.c- O(1)  -bs used here
 int findMax(vector<int> &arr){ //finds max in arr
     int n = arr.size();
     int maxi = 0;

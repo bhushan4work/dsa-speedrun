@@ -2,7 +2,7 @@
 // note: If 2 rows have same no of 1s, consider one with smaller index. If no row with at least 1 zero exists, return -1
 
 
-// method1(brute) t.c- O(n * m)  s.c- O(1)  -normal iteration is done i.e bs not used here
+// (brute) t.c- O(n * m)  s.c- O(1)  -normal iteration is done i.e bs not used here
 int rowWithMax1s(vector<vector<int>> &matrix, int m, int n){  // here m=rows , n=cols
     int cnt_max = 0; // compare with counter & gets max-1s count in matrix
     int index = -1;  // stores index of row with max-1s
@@ -22,7 +22,7 @@ int rowWithMax1s(vector<vector<int>> &matrix, int m, int n){  // here m=rows , n
 }
 
 
-// method2(optimal) t.c- O(m * logn)  s.c- O(1)  -bs used here
+// (optimal) t.c- O(m * logn)  s.c- O(1)  -bs used here
 int lowerBound(vector<int> &arr, int sizeOfArr, int one){  // finds 1st occurrence of '1' in each row of matrix
     int low = 0, high = sizeOfArr - 1;
     int ans = sizeOfArr; // Default if one not found

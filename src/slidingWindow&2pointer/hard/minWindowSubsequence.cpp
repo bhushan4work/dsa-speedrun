@@ -2,7 +2,7 @@
 //subsequence: a sequence that can be derived from another sequence by removing zero or more elements, without changing the order
 
 
-//method1(brute) t.c- O(n^2)  s.c- O(1) 
+//(brute) t.c- O(n^2)  s.c- O(1) 
 string minWindow(string s, string t){
     int n = s.size();
     int m = t.size();
@@ -33,7 +33,7 @@ string minWindow(string s, string t){
 }
 
 
-//method2(optimal) t.c- O(n)  s.c- O(1)
+//(optimal) t.c- O(n)  s.c- O(1)
 string minWindow(string s, string t){
     int n = s.size(), m = t.size();
     int bestStart = -1, bestLen = INT_MAX;

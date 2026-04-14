@@ -1,6 +1,6 @@
 // statement- Return the number of good subarr of nums. good subarr: subarr that contains exactly k distinct integers
 
-// method1(brute) t.c- O(n^2 * k)  s.c- O(k)
+// (brute) t.c- O(n^2 * k)  s.c- O(k)
 int subarraysWithKDistinct(vector<int> &nums, int k){
     int count = 0;
 
@@ -21,7 +21,7 @@ int subarraysWithKDistinct(vector<int> &nums, int k){
 }
 
 
-// method2(optimal) t.c- O(2 * 2n)  s.c- O(k)
+// (optimal) t.c- O(2 * 2n)  s.c- O(k)
 //  Helper function to compute number of subarrays with cnt <=k
 int atMost(vector<int> &nums, int x){
     // edge case for k = 0 , so k-1 thing will go -ve , thats why we keep this

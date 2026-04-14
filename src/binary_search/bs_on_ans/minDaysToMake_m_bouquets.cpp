@@ -1,8 +1,7 @@
 // statement- given an arr where 'arr[i]' denotes that 'ith' rose will bloom on 'arr[i]th' day. Find min no of days required to make at least ‘m' bouquets each containing 'k' roses. Return -1 if not possible
 // note:  You can only pick already bloomed roses that are adjacent to make a bouquet
 
-// method1(brute) t.c- O( (max(arr)-min(arr)) * n )  s.c- O(1)  -normal iteration is done i.e bs not used here, give TLE
-
+// (brute) t.c- O( (max(arr)-min(arr)) * n )  s.c- O(1)  -normal iteration is done i.e bs not used here, give TLE
 //  checks if we can form 'm' bouquets by 'day'
 bool possible(vector<int> &arr, int day, int m, int k){
     int n = arr.size();
@@ -40,8 +39,7 @@ int minDaysToMakeBouquets(vector<int> &bloomDays, int m, int k){
 }
 
 
-// method2(optimal) t.c- O( log(max(arr)-min(arr)) * n )  s.c- O(1)  -bs used here
-
+// (optimal) t.c- O( log(max(arr)-min(arr)) * n )  s.c- O(1)  -bs used here
 // check if it's possible to make m bouquets on or before a given day
 bool possible(vector<int> &arr, int day, int m, int k){
     int n = arr.size();

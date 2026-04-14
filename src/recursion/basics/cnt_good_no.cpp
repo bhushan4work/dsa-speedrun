@@ -3,7 +3,7 @@
 // A digit str is str consisting only of the digits '0' through '9'. It may contain leading zeros
 
 
-//method1(optimal) -recursion using binary exp t.c- O(logn)  s.c- O(1)
+//(optimal) -recursion using binary exp t.c- O(logn)  s.c- O(1)
 
 const long long MOD = 1e9 + 7; // Modulo value to prevent overflow
 

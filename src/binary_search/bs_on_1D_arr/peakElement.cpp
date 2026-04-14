@@ -1,6 +1,6 @@
 // statement- peak element: element greater than both neighbours. If multiple peak num exist, return index of any peak num
 
-// method1(brute) t.c- O(n)  s.c- O(1)  -normal iteration is done i.e bs not used here
+// (brute) t.c- O(n)  s.c- O(1)  -normal iteration is done i.e bs not used here
 int findPeakElement(vector<int> &arr){
     int n = arr.size();
     // handling edge cases of 1st & last element
@@ -14,7 +14,7 @@ int findPeakElement(vector<int> &arr){
     return -1;
 }
 
-// method2(optimal) t.c- O(logn)  s.c- O(1)  -bs used here
+// (optimal) t.c- O(logn)  s.c- O(1)  -bs used here
 int findPeakElement(vector<int> &arr){
     int n = arr.size();
     // handling edge cases of 1st & last element

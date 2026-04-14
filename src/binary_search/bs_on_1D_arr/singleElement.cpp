@@ -1,6 +1,6 @@
 // statement-  Every element in the arr except one appears twice. Find the single element in the arr
 
-// method1(brute) t.c- O(n)  s.c- O(1)  -normal iteration is done i.e bs not used here
+// (brute) t.c- O(n)  s.c- O(1)  -normal iteration is done i.e bs not used here
 int singleNonDuplicate(vector<int> &arr){
     int n = arr.size();
     // handling edge case initially for 1st & last element of arr
@@ -16,7 +16,7 @@ int singleNonDuplicate(vector<int> &arr){
     return -1;
 }
 
-// method2(brute) t.c- O(n)  s.c- O(1)  -XOR is done i.e bs not used here
+// (brute) t.c- O(n)  s.c- O(1)  -XOR is done i.e bs not used here
 // a ^ a = 0, a ^ 0 = a, XOR all elements, all duplicates will be = 0 & we'll get single element
 int singleNonDuplicate(vector<int> &arr){
     int n = arr.size();
@@ -28,7 +28,7 @@ int singleNonDuplicate(vector<int> &arr){
     return ans;
 }
 
-// method3(optimal) t.c- O(logn)  s.c- O(1)  -bs used here
+// (optimal) t.c- O(logn)  s.c- O(1)  -bs used here
 int singleNonDuplicate(vector<int> &arr){
     int n = arr.size();
     // handling edge case initially for 1st & last element of arr

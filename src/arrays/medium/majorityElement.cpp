@@ -1,6 +1,6 @@
 //statement- given an element that appears more than n/2 times in arr. The arr is guaranteed to have majority element.
 
-// method1(brute) t.c- O(n^2)  s.c- O(1)
+// (brute) t.c- O(n^2)  s.c- O(1)
 int majorityElement(vector<int> &arr){
     for (int i = 0; i < arr.size(); i++){
         int cnt = 0; //counts freq of element
@@ -16,7 +16,7 @@ int majorityElement(vector<int> &arr){
     return -1;
 }
 
-//method2(better) using hashing t.c- O(nlogn + n)  s.c- O(n) as we are storing elements in map
+//(better) using hashing t.c- O(nlogn + n)  s.c- O(n) as we are storing elements in map
 int majorityElement(vector<int>& arr) {
     map <int,int> mpp;
     for(int i=0;i<arr.size();i++){
@@ -30,7 +30,7 @@ int majorityElement(vector<int>& arr) {
     return -1;
 }
 
-//method3(optimal) using Moore's Voting Algorithm  t.c- O(n)  s.c- O(1)
+//(optimal) using Moore's Voting Algorithm  t.c- O(n)  s.c- O(1)
 int majorityElement(vector<int>& arr) {
     int cnt = 0;
     int el;

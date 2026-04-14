@@ -1,6 +1,6 @@
 // statement- check if 2 strings are anagrams of each other. Anagrams: all possible permutations of string
 
-// method1(brute) t.c- O(nlogn + n)  s.c- O(1)
+// (brute) t.c- O(nlogn + n)  s.c- O(1)
 bool CheckAnagrams(string str1, string str2){
     if (str1.length() != str2.length()){  // checks edge case
         return false; // Strings can't be anagrams if lengths are different
@@ -19,7 +19,7 @@ bool CheckAnagrams(string str1, string str2){
     return true; 
 }
 
-// method2(optimal) t.c- O(n)  s.c- O(1)
+// (optimal) t.c- O(n)  s.c- O(1)
 bool CheckAnagrams(string str1, string str2){
     if (str1.length() != str2.length()){  // checks edge case
         return false; // Strings can't be anagrams if lengths are different

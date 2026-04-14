@@ -10,7 +10,7 @@
 // → insertAtBottom([2,1], 3) → pop 1,2 → [] → push 3 → push 2 → push 1 → [3,2,1]
 
 
-//method1(brute) -using recursion t.c- O(n^2)  s.c- O(n)
+//(brute) -using recursion t.c- O(n^2)  s.c- O(n)
 void insertAtBottom(stack<int> &st, int val) {
     if (st.empty()) { // If stack is empty, push the value
         st.push(val);

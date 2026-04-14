@@ -12,7 +12,7 @@
 // → insert([1,3,4], 2) → pop 4,3 → [1] → push 2 → push 3 → push 4 → [1,2,3,4]
 
 
-//method1(brute) -using recursion t.c- O(n^2)  s.c- O(n)
+//(brute) -using recursion t.c- O(n^2)  s.c- O(n)
 void insert(stack<int>& s, int temp) {
     if (s.empty() || s.top() <= temp) { // Base case: if stack is empty or temp is larger than the top element
         s.push(temp);

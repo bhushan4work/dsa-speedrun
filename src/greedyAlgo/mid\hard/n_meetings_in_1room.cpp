@@ -2,7 +2,7 @@
 //note :  start time of one chosen meeting can't be equal to end time of other meeting
 
 
-// method1(optimal) t.c- O(n)  s.c- O(1)
+// (optimal) t.c- O(n)  s.c- O(1)
 int maxMeetings(vector<int> &start, vector<int> &end){
     int n = start.size();
     vector<pair<int, int>> meetings;

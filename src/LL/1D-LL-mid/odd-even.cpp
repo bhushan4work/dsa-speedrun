@@ -1,6 +1,6 @@
 // statement- group all nodes with odd indices followed by all nodes with even indices & return reordered list. Consider 1st node to have index 1 and so on. relative order of elements inside odd & even group must remain same as given input
 
-// method1(brute) t.c- O(n)  s.c- O(n)
+// (brute) t.c- O(n)  s.c- O(n)
 ListNode *oddEvenList(ListNode *head){
     if (!head) return head;
 
@@ -41,7 +41,7 @@ ListNode *oddEvenList(ListNode *head){
 }
 
 
-// method2(optimal) t.c- O(n)  s.c- O(1)
+// (optimal) t.c- O(n)  s.c- O(1)
 ListNode *oddEvenList(ListNode *head){
     if (head == NULL || head->next == NULL) return head; // Edge case
 

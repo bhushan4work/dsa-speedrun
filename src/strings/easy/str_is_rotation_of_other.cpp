@@ -1,7 +1,7 @@
 // statement- return true if s can become goal after some number of shifts on s. shift on s consists of moving leftmost char of s to the rightmost position
 //            For example, if s = "abcde", then it will be "bcdea" after one shift
 
-// method1(brute) t.c- O(n^2)  s.c- O(n)
+// (brute) t.c- O(n^2)  s.c- O(n)
 bool rotateString(string &s, string &goal){
     if (s.length() != goal.length()){   // str must be of same length to be rotations of each other
         return false;

@@ -1,7 +1,7 @@
 // statement- Given an arr print all the sum of subset generated from it, in increasing order
 
 
-// method1(brute) t.c- O(2^n)  s.c- O(n)
+// (brute) t.c- O(2^n)  s.c- O(n)
 void solve(int index, vector<int>& nums, vector<int>& current, vector<vector<int>>& result) {
     if (index == nums.size()) {
         result.push_back(current);

@@ -1,6 +1,6 @@
 //statement- subque1) if sum of 2 nums == target print yes else no ; subque2) if sum of 2 nums == target return their index else {-1,-1}
 
-//method1(brute) t.c- O(n^2) s.c- O(1)
+//(brute) t.c- O(n^2) s.c- O(1)
 string twoSumExists(vector<int> &arr, int target){
     //type1
     for (int i = 0; i < arr.size(); i++){ 
@@ -25,7 +25,7 @@ vector<int> twoSumIndices(vector<int>& arr, int target) {
 }
 
 
-//method2 with hashing(better)  t.c- O(n) s.c- O(n)
+// with hashing(better)  t.c- O(n) s.c- O(n)
 //if we take map here t.c- O(nlogn) 
 string twoSumExists(vector<int>& arr, int target) {
     //type1
@@ -54,7 +54,7 @@ vector<int> twoSumIndices(vector<int>& arr, int target) {
     return {-1, -1};  // No pair found
 }
 
-//method3 with 2pointer(optimal) t.c- O(n+nlogn)  s.c- O(n)
+// with 2pointer(optimal) t.c- O(n+nlogn)  s.c- O(n)
 string twoSumExists(vector<int> arr, int target) {
     //type1
     int left = 0, right = arr.size() - 1;

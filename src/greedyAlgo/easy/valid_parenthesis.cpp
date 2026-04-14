@@ -1,7 +1,7 @@
 // statement- given a str s containing only 3 types of char: '(',')' & '*', return true if s is valid
 // note: '*' could be treated as ')' or '(' or empty string ""
 
-// method1(brute) t.c- O(3^n)  s.c- O(n)
+// (brute) t.c- O(3^n)  s.c- O(n)
 bool solve(int i, int open, string &s){
     if (open < 0) return false;
 
@@ -27,7 +27,7 @@ bool checkValidString(string s){
 }
 
 
-// method2(optimal) t.c- O(n)  s.c- O(1)
+// (optimal) t.c- O(n)  s.c- O(1)
 bool checkValidString(string s){
     int minOpen = 0, maxOpen = 0; // range of possible open brackets
 

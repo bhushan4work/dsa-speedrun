@@ -1,6 +1,6 @@
 // statement-  given head of sorted DLL. remove all duplicates in list. return head of modified list
 
-// method1(optimal) t.c- O(n)  s.c- O(1)
+// (optimal) t.c- O(n)  s.c- O(1)
 Node *removeDuplicates(){
     if (!head) return nullptr; // If list is empty, return null
     Node *current = head;

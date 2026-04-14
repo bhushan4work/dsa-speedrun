@@ -1,7 +1,7 @@
 //statement- given the head of LL, return reversed LL
 
 
-//method1(brute) t.c- O(n)  s.c- O(n) 
+//(brute) t.c- O(n)  s.c- O(n) 
 ListNode *reverseList(ListNode *head){
     stack<int> st;
     ListNode *temp = head;
@@ -23,7 +23,7 @@ ListNode *reverseList(ListNode *head){
 }
 
 
-//method2(optimal) t.c- O(n)  s.c- O(1)  
+//(optimal) t.c- O(n)  s.c- O(1)  
 ListNode* reverseList(ListNode* head) {
     ListNode* prev = nullptr;
     ListNode* temp = head;
@@ -40,7 +40,7 @@ ListNode* reverseList(ListNode* head) {
 }
 
 
-//method3(optimal) -recursive t.c- O(n)  s.c- O(n)  
+//(optimal) -recursive t.c- O(n)  s.c- O(n)  
 ListNode *reverseList(ListNode *head){
     ListNode *prev = nullptr;
     ListNode *temp = head;

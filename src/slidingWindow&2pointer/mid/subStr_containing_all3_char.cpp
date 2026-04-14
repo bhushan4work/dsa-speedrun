@@ -1,6 +1,6 @@
 // statement- string s consists of char 'a', 'b', 'c. Find cnt of all possible substr that contain at least one occurrence of all these characters 'a' , 'b' , 'c'
 
-// method1(brute) t.c- O(n^2)  s.c- O(3)
+// (brute) t.c- O(n^2)  s.c- O(3)
 int numberOfSubstrings(string s){
     int count = 0;
 
@@ -21,7 +21,7 @@ int numberOfSubstrings(string s){
     return count;
 }
 
-// method2(optimal) t.c- O(n + n)  s.c- O(3)
+// (optimal) t.c- O(n + n)  s.c- O(3)
 int numberOfSubstrings(string s){
     int l = 0, r = 0;
     int cnt = 0;

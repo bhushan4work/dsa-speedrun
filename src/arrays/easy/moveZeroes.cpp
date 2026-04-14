@@ -1,7 +1,7 @@
 //statement- move all the zeroes in given arr at the end of the arr 
 
 void moveZeroes(vector<int>& arr, int n){
-    //method1- (brute) t.c.- O(n + x + (n-x)) = O(2n) , s.c- O(x) & for worstcase(no zeroes)- O(n)
+    // (brute) t.c.- O(n + x + (n-x)) = O(2n) , s.c- O(x) & for worstcase(no zeroes)- O(n)
     //Zeroes at the end
     vector<int> temp;
     for(int i=0;i<n;i++){
@@ -38,7 +38,8 @@ void moveZeroes(vector<int>& arr, int n){
     }
     return arr;
 
-    //method2- (optimal) -2pointer t.c.- O(x + (n-x)) = O(n) , s.c.- O(1)
+    
+    //(optimal) -2pointer t.c.- O(x + (n-x)) = O(n) , s.c.- O(1)
     //Zeroes at the end
     int j= -1; //or INT_MIN or any value less than 0
     for(int i=0;i<n;i++){

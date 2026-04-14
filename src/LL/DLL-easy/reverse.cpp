@@ -1,7 +1,7 @@
 //statement- task is to reverse a DLL & return the head of the modified DLL
 
 
-//method1(brute) t.c- O(2n)  s.c- O(n)
+//(brute) t.c- O(2n)  s.c- O(n)
 Node* reverseDLL(Node* head) {
     if (head == nullptr || head->next == nullptr) { // If list is empty or has only one node, return as-is
         return head;
@@ -26,7 +26,7 @@ Node* reverseDLL(Node* head) {
 }
 
 
-//method2(optimal) t.c- O(n)  s.c- O(1)
+//(optimal) t.c- O(n)  s.c- O(1)
 Node* reverseDLL(Node* head) {
     // If list is empty or has one node, nothing to reverse
     if (head == nullptr || head->next == nullptr) return head;

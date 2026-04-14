@@ -3,7 +3,7 @@
 // 1)each student gets at least 1 book 2)Each book should be allocated to only 1 student 3)Book allocation should be in contiguous manner
 // You have to allocate the book to ‘m’ students such that max no of pages assigned to student is min. If allocation of books not possible return -1
 
-// method1(brute) t.c- O( N * (sum(arr)-max(arr)) )  s.c- O(1)  -normal iteration is done i.e bs not used here
+// (brute) t.c- O( N * (sum(arr)-max(arr)) )  s.c- O(1)  -normal iteration is done i.e bs not used here
 int countStudents(vector<int> &arr, int pages){
     int n = arr.size(); 
     int students = 1;
@@ -36,7 +36,7 @@ int findPages(vector<int> &arr, int n, int m){
 }
 
 
-// method2(optimal) t.c- O( N * log(sum(arr)-max(arr)) )  s.c- O(1)  -bs used here
+// (optimal) t.c- O( N * log(sum(arr)-max(arr)) )  s.c- O(1)  -bs used here
 int countStudents(vector<int> &arr, int pages){
     int n = arr.size(); 
     int students = 1;

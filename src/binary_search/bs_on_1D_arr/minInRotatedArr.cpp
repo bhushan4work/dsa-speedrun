@@ -1,7 +1,7 @@
 //statement- sorted arr is rotated at any index which is unknown. Find the minimum element in the array (unique elements)
 //approach- pick sorted part → store min val(i.e leftmost) → eliminate that part → check for min in other part & update min val
 
-//method1(brute) t.c- O(n)  s.c- O(1)  -normal iteration is done i.e bs not used here
+//(brute) t.c- O(n)  s.c- O(1)  -normal iteration is done i.e bs not used here
 int findMin(vector<int> &arr){
     int mini = INT_MAX;
     for (int i = 0; i < arr.size(); i++){
@@ -12,7 +12,7 @@ int findMin(vector<int> &arr){
     return mini;
 }
 
-//method2(optimal) t.c- O(logn)  s.c- O(1)  -bs used here
+//(optimal) t.c- O(logn)  s.c- O(1)  -bs used here
 int findMin(vector<int> &arr){
     int low = 0, high = arr.size() - 1;
     int mini = INT_MAX;
@@ -38,8 +38,8 @@ int findMin(vector<int> &arr){
 }
 
 
-//FAQ's- same above question with duplicate elements
 
+//FAQ's- same above question with duplicate elements
 //(optimal) t.c- O(logn)  s.c- O(1)  -bs used here
 int findMin(vector<int> &arr){ 
     int low = 0, high = arr.size() - 1;

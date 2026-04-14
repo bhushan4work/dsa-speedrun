@@ -2,7 +2,7 @@
 //for most optimal: t.c- O(n)  s.c- O(n) - Manacher’s Algorithm is used 
 
 
-//method1(brute) t.c- O(n^3)  s.c- O(1)
+//(brute) t.c- O(n^3)  s.c- O(1)
 bool isPalindrome(const string &s, int l, int r) { //helper fxn to return if curr substr is pal 
     while (l < r) {
         if (s[l] != s[r]) return false; //pal not found
@@ -29,7 +29,7 @@ string longestPalindromeBrute(string s) { //main fxn to get longest pal
 
 
 
-//method2(optimal) t.c- O(n^2)  s.c- O(1) - expand around approach
+//(optimal) t.c- O(n^2)  s.c- O(1) - expand around approach
 string longestPalindrome(string s) {
     if (s.size() == 0) return "";  //edge case handling
     int start = 0;   // starting index of best palindrome

@@ -1,7 +1,7 @@
 // statement- remove outermost parentheses from every primitive component of s & return resulting string
 // note: primitive valid parentheses string is non-empty valid string that cant be split into 2 or more non-empty valid parentheses strings
 
-// method1(brute) t.c- O(n)  s.c- O(n)
+// (brute) t.c- O(n)  s.c- O(n)
 string removeOuterParentheses(string s){
     stack<char> st; 
     string ans = "";
@@ -23,7 +23,7 @@ string removeOuterParentheses(string s){
     return ans;
 }
 
-// method2(optimal) t.c- O(n)  s.c- O(1)
+// (optimal) t.c- O(n)  s.c- O(1)
 string removeOuterParentheses(string s){
     string ans = "";
     int cnt = 0;

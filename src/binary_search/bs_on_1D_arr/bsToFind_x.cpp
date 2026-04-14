@@ -3,7 +3,7 @@
 //if search space is till INT_MAX, use 'long long' instead of 'int' to store mid
 // t.c- we divide search space into 2 equal halves. After a certain num of divisions, we'll not be able to divide it further. The num of total divisions = t.c
 
-// method1(Iterative) t.c- O(logn) base is 2  s.c- O(1)
+// (Iterative) t.c- O(logn) base is 2  s.c- O(1)
 int binarySearch(vector &nums, int target){
     int n = nums.size(); 
     int low = 0, high = n - 1;
@@ -20,7 +20,7 @@ int binarySearch(vector &nums, int target){
     return -1; // Target not found
 }
 
-// method2(Recursive) t.c- O(logn) base is 2   s.c- O(1)
+// (Recursive) t.c- O(logn) base is 2   s.c- O(1)
 int binarySearch(vector &nums, int low, int high, int target){
     int n = nums.size(); 
     if (low > high)

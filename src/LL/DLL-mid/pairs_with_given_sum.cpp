@@ -1,6 +1,6 @@
 // statement- given sorted DLL of +ve distinct elements, task is to find pairs in DLL whose sum = given value target
 
-// method1(brute) t.c- O(n^2)  s.c- O(1)
+// (brute) t.c- O(n^2)  s.c- O(1)
 vector<pair<int, int>> findPairsWithGivenSum(Node *head, int target){
     vector<pair<int, int>> ans;
     Node *temp1 = head;
@@ -21,7 +21,7 @@ vector<pair<int, int>> findPairsWithGivenSum(Node *head, int target){
 }
 
 
-// method2(optimal) t.c- O(n + n)  s.c- O(1)
+// (optimal) t.c- O(n + n)  s.c- O(1)
 Node* findTail(Node* head){
     Node* tail = head;
     while(tail->next != nullptr){

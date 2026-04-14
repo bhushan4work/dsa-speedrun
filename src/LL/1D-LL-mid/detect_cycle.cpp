@@ -2,7 +2,7 @@
 //cycle: cycle in a LL if there is some node in the list that can be reached again by continuously following the nextptr
 
 
-//method1(brute) t.c- O(n * logn)  s.c- O(n) 
+//(brute) t.c- O(n * logn)  s.c- O(n) 
 bool detectLoop(Node *head){
     Node *temp = head;
     
@@ -19,7 +19,7 @@ bool detectLoop(Node *head){
 }
 
 
-//method2(optimal) -using tortoise & hare algo t.c- O(n)  s.c- O(1)  
+//(optimal) -using tortoise & hare algo t.c- O(n)  s.c- O(1)  
 bool detectLoop(Node *head){
     Node* slow = head;
     Node* fast = head;

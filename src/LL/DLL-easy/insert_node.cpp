@@ -2,7 +2,7 @@
 
 
 // statement- insert node before head
-// method1(optimal) t.c- O(1)  s.c- O(1)
+// (optimal) t.c- O(1)  s.c- O(1)
 Node *insertBeforeHead(Node *head, int val){
     if (head == nullptr){ // If list is empty
         return new Node(val, nullptr, nullptr);
@@ -15,7 +15,7 @@ Node *insertBeforeHead(Node *head, int val){
 
 
 // statement- insert node before tail
-// method1(optimal) t.c- O(n)  s.c- O(1)
+// (optimal) t.c- O(n)  s.c- O(1)
 Node *insertBeforeLast(Node *head, int val){
     if (head == nullptr){ // If list is empty
         return new Node(val, nullptr, nullptr);
@@ -42,7 +42,7 @@ Node *insertBeforeLast(Node *head, int val){
 
 
 // statement- insert node at kth position (0 based indexing is used for k)
-// method1(optimal) t.c- O(n)  s.c- O(1)
+// (optimal) t.c- O(n)  s.c- O(1)
 Node *insertBeforeK(Node *head, int k, int val){
     if (head == nullptr){ // If list is empty
         return nullptr;
@@ -72,7 +72,7 @@ Node *insertBeforeK(Node *head, int k, int val){
 
 
 // statement- insert node having value x before node of value val (head is given)
-// method1(optimal) t.c- O(n)  s.c- O(1)
+// (optimal) t.c- O(n)  s.c- O(1)
 Node *insertBeforeValue(Node *head, int x, int val){
     if (head == nullptr){ // If list is empty
         return new Node(val, nullptr, nullptr);

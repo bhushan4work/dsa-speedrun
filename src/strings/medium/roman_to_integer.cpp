@@ -1,6 +1,6 @@
 // statement- Roman numerals are represented by 7 different symbols: I = 1, V = 5, X = 10, L = 50, C = 100, D = 500, M = 1000, return integer value of given roman numeral
 
-// method1(optimal) t.c- O(n)  s.c- O(1)
+// (optimal) t.c- O(n)  s.c- O(1)
 int romanToInt(string s){
     int ans = 0;
 

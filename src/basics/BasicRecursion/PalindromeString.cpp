@@ -1,7 +1,7 @@
 //statement- Given a string, check if the string is palindrome or not. A string is said to be palindrome if the reverse of the string is the same as the string
 //palindrome - which gives same output as of input on reversal
 
-//method1
+// (brute)
 bool isPalindrome(string str) {
     int left = 0, right = str.length()-1;
     while(left<right){
@@ -21,7 +21,7 @@ bool isPalindrome(string str) {
     //if we finish loop without returning false then its palindrome
 }
 
-//method2 : by recursion
+// (optimal) by recursion
 bool palindrome(int i, string s){
     // Base Condition
     // If i exceeds half of the string, means all the elements

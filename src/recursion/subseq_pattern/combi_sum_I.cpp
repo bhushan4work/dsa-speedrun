@@ -1,6 +1,6 @@
 // statement- arr has distinct int, return list of all unique combi where chosen nos sum to target. same no can be chosen unlimited no of times
 
-// method1(brute) -using recursion t.c- O(2^t * k)  s.c- O(k * x)
+// (brute) -using recursion t.c- O(2^t * k)  s.c- O(k * x)
 void findCombination(int ind, int target, vector<int> &arr, vector<vector<int>> &ans, vector<int> &ds){
     if (ind == arr.size()){ // Base case: if we have considered all elements in arr
         if (target == 0){ // If target is zero, we found valid combi

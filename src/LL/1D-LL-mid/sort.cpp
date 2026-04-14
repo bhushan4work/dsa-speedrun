@@ -1,7 +1,7 @@
 // statement- Given a LL, sort its nodes based on data value in them. return head of sorted LL
 
 
-// method1(brute) t.c- O(n + nlog + n)  s.c- O(n)
+// (brute) t.c- O(n + nlog + n)  s.c- O(n)
 Node *sortLL(Node *head){
     vector<int> arr;
     Node *temp = head;
@@ -24,7 +24,7 @@ Node *sortLL(Node *head){
 }
 
 
-// method2(optimal) t.c- O(logn * (n + n\2))  s.c- O(logn) for recursive stack
+// (optimal) t.c- O(logn * (n + n\2))  s.c- O(logn) for recursive stack
 Node *findMiddle(Node *head){
     if (head == nullptr || head->next == nullptr){ // If list empty or single node
         return head;

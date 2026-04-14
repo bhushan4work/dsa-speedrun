@@ -1,7 +1,7 @@
 //statement- given a LL containing only 0's, 1's, & 2's, sort LL by rearranging the links
 
 
-//method1(brute) t.c- O(2n)  s.c- O(1) 
+//(brute) t.c- O(2n)  s.c- O(1) 
 void sortZeroOneTwo(Node* head) {
     Node* temp = head;
     int cnt0 = 0;
@@ -42,7 +42,7 @@ void sortZeroOneTwo(Node* head) {
 }
 
 
-//method2(optimal) t.c- O(n)  s.c- O(1)
+//(optimal) t.c- O(n)  s.c- O(1)
 void sortZeroOneTwo(Node* head) {
     if(head == nullptr || head->next == nullptr) return __head; //edge case of list size <= 1 
 

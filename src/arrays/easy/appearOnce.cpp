@@ -1,7 +1,7 @@
 //statement- Find the number that appear once,where other numbers appear twice
 
 int singleNumber(vector<int>& arr) {
-    //method1-(brute)  t.c.- O(n^2) s.c.- O(1)
+    //(brute)  t.c.- O(n^2) s.c.- O(1)
     int n = arr.size();
     for (int i = 0; i < n; i++) {
         int num = arr[i]; // current element to check
@@ -14,7 +14,7 @@ int singleNumber(vector<int>& arr) {
     }
     return -1;
 
-    //method2-(better)  t.c.- O(n+n+n)  s.c.- O(maxelement+1)
+    //(better)  t.c.- O(n+n+n)  s.c.- O(maxelement+1)
     int n = arr.size();
     int maxi = arr[0];
     for (int i = 0; i < n; i++) {
@@ -32,7 +32,7 @@ int singleNumber(vector<int>& arr) {
     }
     return -1;
 
-    //method3-(optimal)  t.c.- O(n) s.c.- O(1)
+    //(optimal)  t.c.- O(n) s.c.- O(1)
     //xor- returns true(or 1) when 2 inputs are diff, else false(or 0) when 2 inputs are same
     int n = arr.size();
     int xorr = 0;

@@ -1,7 +1,7 @@
 // statement- weight of N items & their corresponding values are given. put these items in knapsack of wt W such that total value obtained is maximized
 // Note: We can either take item as whole or break it into smaller units
 
-// method1(optimal) t.c- O(nlogn + n)  s.c- O(1)
+// (optimal) t.c- O(nlogn + n)  s.c- O(1)
 
 struct Item{
     int value;

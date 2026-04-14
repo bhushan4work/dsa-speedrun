@@ -1,6 +1,6 @@
 //statement- find the nth root of m. If nth root is not an integer, return -1
 
-//method1(brute) t.c- O(m)  s.c- O(1)  -normal iteration is done i.e bs not used here
+//(brute) t.c- O(m)  s.c- O(1)  -normal iteration is done i.e bs not used here
 int nthRoot(int n, int m) {
     for (int i = 1; i <= m; i++) {
         long long power = pow(i, n);
@@ -12,7 +12,7 @@ int nthRoot(int n, int m) {
     return -1;
 }
 
-//method2(optimal) t.c- O(logm)  s.c- O(1)  -bs used here
+//(optimal) t.c- O(logm)  s.c- O(1)  -bs used here
 int power(int mid, int n, int m) { //this fxn avoids full power calculation and overflow
     //we made this fxn to get pointers for =m\<m\>m
     long long ans = 1;

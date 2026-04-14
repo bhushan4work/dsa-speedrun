@@ -1,7 +1,7 @@
 // statement- each card in arr has score denoted by its value. Choose k cards. In each step, card can be chosen either all from beginning
 //             or all from end or mix of both .ans is maxSum of scores of chosen cards
 
-// method1(optimal) t.c- O(2k)  s.c- O(1)
+// (optimal) t.c- O(2k)  s.c- O(1)
 int maxScore(vector<int> &arr, int k){
     int n = arr.size();
     int lSum = 0, rSum = 0;

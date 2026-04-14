@@ -1,7 +1,7 @@
 // statement- 2 arr represent arrival & departure time of trains that stop at the platform. find min no of platforms needed at railway station so that no train has to wait
 
 
-// method1(brute) t.c- O(n^2)  s.c- O(1)
+// (brute) t.c- O(n^2)  s.c- O(1)
 int countPlatforms(int n, int arr[], int dep[]){
     int maxCount = 1; // Initialize answer to 1
 
@@ -21,7 +21,7 @@ int countPlatforms(int n, int arr[], int dep[]){
 }
 
 
-// method2(optimal) t.c- O(2 * nlogn + 2n)  s.c- O(1)
+// (optimal) t.c- O(2 * nlogn + 2n)  s.c- O(1)
 int countPlatforms(int n, int arr[], int dep[]){
     // Sort the arrival & departure times
     sort(arr.begin(), arr.end());

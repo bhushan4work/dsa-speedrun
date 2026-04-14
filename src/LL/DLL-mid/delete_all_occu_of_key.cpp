@@ -1,7 +1,7 @@
 //statement- given head of DLL & Key. task is to delete all occurrences of given key if its present & return new DLL
 
 
-//method1(optimal) t.c- O(n)  s.c- O(1)
+//(optimal) t.c- O(n)  s.c- O(1)
 Node* deleteAllOccurrences(Node* head, int key) {
     Node* curr = head;
 

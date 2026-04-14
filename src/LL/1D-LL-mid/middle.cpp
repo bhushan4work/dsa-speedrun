@@ -1,7 +1,7 @@
 //statement- head of LL is given, determine the middle node of LL. if LL has even number of nodes, return second middle node
 
 
-//method1(brute) t.c- O(n + n\2)  s.c- O(1) 
+//(brute) t.c- O(n + n\2)  s.c- O(1) 
 Node *findMiddle(Node *head) {
     if (head == nullptr || head->next == nullptr) { // If the list is empty or has only 1 element, return the head as it's the middle
         return head;
@@ -31,7 +31,7 @@ Node *findMiddle(Node *head) {
 }
 
 
-//method2(optimal)- using tortoise & hare algo t.c- O(n\2)  s.c- O(1)
+//(optimal)- using tortoise & hare algo t.c- O(n\2)  s.c- O(1)
 Node *findMiddle(Node *head) {
     Node *slow = head;   // Initialize slow ptr to head
     Node *fast = head;   // Initialize fast ptr to head
