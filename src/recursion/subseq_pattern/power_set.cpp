@@ -9,10 +9,10 @@ void helper(string &s, int index, string &current, vector<string> &result) {
         return;
     }
     
-    // STEP 1: EXCLUDE the curr char
+    // EXCLUDE the curr char
     helper(s, index + 1, current, result); // Move to next index without adding anything
 
-    // STEP 2: INCLUDE the current character
+    // INCLUDE the current character
     current.push_back(s[index]);   // choose the char
 
     helper(s, index + 1, current, result);
