@@ -3,12 +3,12 @@
 //(brute) t.c- O(n)  s.c- O(1)
 int findRangeXOR(int l, int r){
     int ans = 0; // To store XOR of nos
-
     for (int i = l; i <= r; i++){ // XOR all nos from l to r
         ans ^= i;
     }
     return ans;
 }
+
 
 //(optimal) t.c- O(1)  s.c- O(1)
 int XORtillN(int n){
