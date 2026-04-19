@@ -12,17 +12,14 @@ int main(){
         }
     }
 
-
-    //(optimal)
-    //suppose n=36 so its factors are 1*36, 2*18 ,etc but after 6*6 the factors repeat itself
-    // so we wanna print till 6*6 only as we get all factors .
-    vector<int> list;     //list that stores values
-    //O(sqrt(n)) - T.C
+    //(optimal) t.c- O(sqrt(n))
+    //suppose n=36 so its factors are 1*36, 2*18 ,etc but after 6*6 factors repeat itself
+    vector<int> list;
     for(int i = 1; i <= sqrt(n); i++){
         if(n % i == 0){
-            list.push_back(i);
-            if(n / i != i){  //counts divisor in pair
-            list.push_back(n / i); 
+            list.push_back(i); // this will add 1 from 1*36
+            if(n / i != i){  //this prevents adding same divisor twice e.g 6*6
+                list.push_back(n / i); // adds 36 from 1*36
             }
         }
     }
