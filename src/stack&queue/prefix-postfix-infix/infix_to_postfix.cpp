@@ -9,6 +9,7 @@
 // Repeat this until entire infix expression has been scanned
 // Finally, pop from stack & add all char in ans until stack is empty
 
+
 //(optimal) t.c- O(n + n)  s.c- O(n + n)
 int priorityy(char c){
     if (c == '^') return 3;
