@@ -16,3 +16,71 @@
 
 //(optimal) t.c- O(n)  s.c- O(n)
 
+// function to return precedence of op
+int precedence(char c) {
+    if (c == '^') return 3;
+    else if (c == '*' || c == '/') return 2;
+    else if (c == '+' || c == '-') return 1;
+    else return -1;
+}
+
+// function to check if char is op
+bool isOperator(char c) {
+    return (c == '+' || c == '-' || c == '*' || c == '/' || c == '^');
+}
+
+// Function to check if op is right-associative
+bool isRightAssociative(char op) {
+    return (op == '^');
+}
+
+// function to convert infix to prefix
+string infixToPrefix(string s) {
+    reverse(s.begin(), s.end());
+
+    // swap '(' and ')'
+    for (int i = 0; i < (int)s.length(); i++) {
+        if (s[i] == '(') s[i] = ')';
+        else if (s[i] == ')') s[i] = '(';
+    }
+
+    stack<char> st;    
+    string result = ""; 
+
+    // convert to postfix (on reversed expression)
+    for (int i = 0; i < (int)s.length(); i++) {
+        char c = s[i];
+
+        if (isalnum(c)) {
+            result += c; 
+        }
+        else if (c == '(') {
+            st.push(c);
+        }
+        else if (c == ')') {
+            while (!st.empty() && st.top() != '(') {
+                result += st.top();
+                st.pop();
+            }
+            if (!st.empty()) st.pop(); 
+        }
+        else if (isOperator(c)) {
+                while (!st.empty() && st.top() != '(' &&
+                ((precedence(st.top()) > precedence(c)) ||
+                (precedence(st.top()) == precedence(c) && isRightAssociative(c)))) {
+                result += st.top();
+                st.pop();
+            }
+            st.push(c);
+        }
+    }
+
+    // pop all remaining op
+    while (!st.empty()) {
+        result += st.top();
+        st.pop();
+    }
+
+    reverse(result.begin(), result.end()); // reverse result to prefix
+    return result;
+}
