@@ -14,7 +14,7 @@
 
 
 
-//(optimal) t.c- O(n)  s.c- O(n)
+//(optimal) t.c- O(n\2 + n\2 + 2n)  s.c- O(n)
 
 // function to return precedence of op
 int precedence(char c) {
