@@ -24,8 +24,7 @@ string postfixToPrefix(string postfix) {
             string op1 = s.top(); s.pop();
             string op2 = s.top(); s.pop();
             
-            // Form new prefix expression & push back to stack
-            s.push(c + op2 + op1);
+            s.push(c + op2 + op1); // Form new prefix expression & push back to stack
         }
     }
     return s.top();

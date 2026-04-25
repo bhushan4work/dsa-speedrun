@@ -25,8 +25,7 @@ string prefixToInfix(string prefix) {
             string op1 = s.top(); s.pop();
             string op2 = s.top(); s.pop();
 
-            // Form new infix expression & push back to stack
-            s.push("(" + op1 + c + op2 + ")");
+            s.push("(" + op1 + c + op2 + ")"); // Form new infix expression & push back to stack
         }
     }
     return s.top();
