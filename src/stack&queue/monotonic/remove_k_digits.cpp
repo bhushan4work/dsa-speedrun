@@ -1,4 +1,6 @@
 // statement- find smallest possible integer after removing k digits from given string nums
+// approach: keep smaller nos at first, remove all the bigger ones
+// edgecase: ex-"12345" here we wont be able remove k nos as per our approach but we still need to remove, so in such condn remove last k elements
 
 
 //(optimal) t.c- O(n)  s.c- O(n)
