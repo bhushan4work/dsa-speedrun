@@ -26,7 +26,7 @@ vector<int> topKFrequent(vector<int> &nums, int k){
 }
 
 
-//(optimal) -using bucket sort t.c- O()  s.c- O(1)
+//(optimal) -using bucket sort t.c- O(n)  s.c- O(n) , if sorting required then t.c- O(nlogn)
 vector<int> topKFrequent(vector<int> &nums, int k){
     int n = nums.size();
     unordered_map<int, int> mp;
