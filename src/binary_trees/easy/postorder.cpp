@@ -4,7 +4,7 @@
 
 // statement- Given root of Binary Tree, return postorder traversal
 
-//(optimal): iterative t.c- O(n), s.c- O(h) h: height of bt
+//(optimal): iterative using stack t.c- O(n), s.c- O(h) h: height of bt
 struct TreeNode{
     int data;
     TreeNode *left;
@@ -47,7 +47,7 @@ vector<int> postOrderTraversal(TreeNode *root){
 
 
 
-//(optimal): recursive t.c- O(n), s.c- O(n)
+//(optimal): recursive dfs t.c- O(n), s.c- O(n)
 struct TreeNode{
     int data;
     TreeNode *left;
