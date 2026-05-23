@@ -4,7 +4,7 @@
 
 // statement- Given root of Binary Tree, return postorder traversal
 
-//(optimal): iterative using stack t.c- O(n), s.c- O(h) h: height of bt
+//(optimal): iterative using 2 stack t.c- O(n), s.c- O(n)
 struct TreeNode{
     int data;
     TreeNode *left;
@@ -39,7 +39,7 @@ vector<int> postOrderTraversal(TreeNode *root){
 
     while (!st2.empty()){ // Traverse the second stack
         postorder.push_back(st2.top()->data); // Add the node's value to the postorder traversal list
-        st2.pop();                             // Remove the node from the second stack
+        st2.pop();                            // Remove the node from the second stack
     }
 
     return postorder;
@@ -67,4 +67,56 @@ vector<int> postOrderTraversal(TreeNode *root){
     vector<int> arr;
     postorder(root, arr);
     return arr;
+}
+
+
+
+//(optimal): iterative using 1 stack t.c- O(n), s.c- O(n)
+struct TreeNode{
+    int data;
+    TreeNode *left;
+    TreeNode *right;
+    TreeNode(int val) : data(val), left(nullptr), right(nullptr) {}
+};
+vector<int> postOrderTraversal(TreeNode *root){
+    vector<int> postorder;
+
+    if (root == NULL){
+        return postorder;
+    }
+
+    stack<TreeNode *> st; // Initialize stack
+    TreeNode *curr = root;
+    TreeNode *lastVisited = NULL;
+
+    while (curr != NULL || !st.empty()){ // Traverse until current becomes NULL and stack becomes empty
+
+        if (curr != NULL){
+            st.push(curr);      // Push the current node into the stack
+            curr = curr->left;  // Move to the left subtree
+        }
+        else{
+            TreeNode *temp = st.top()->right; // Get the right child of the top node
+
+            if (temp == NULL){
+                temp = st.top();
+                st.pop(); // Remove the node from the stack
+
+                postorder.push_back(temp->data); // Add the node's value to the postorder traversal list
+                lastVisited = temp;
+
+                while (!st.empty() && lastVisited == st.top()->right){
+                    lastVisited = st.top();
+
+                    postorder.push_back(lastVisited->data); // Add the node's value to the postorder traversal list
+                    st.pop();                               // Remove the node from the stack
+                }
+            }
+            else{
+                curr = temp; // Move to the right subtree
+            }
+        }
+    }
+
+    return postorder;
 }
