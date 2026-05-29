@@ -2,7 +2,7 @@
 
 
 
-//(optimal) t.c- O(n)  s.c- O(h)
+//(optimal) t.c- O(n)  s.c- O(n)
 struct Node{
     int data;    // Data stored in the node
     Node *left;  // Pointer to the left child
