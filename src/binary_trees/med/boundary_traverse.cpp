@@ -75,7 +75,7 @@ vector<int> BoundaryTraversal(Node *root){
         res.push_back(root->data);
     }
 
-    // Add left-boundary -> leaves -> right-boundary(in reverse order)
+    // Add left-boundary -> leaves(inorder traversal) -> right-boundary(in reverse order)
     addLeftBoundary(root, res);
     addLeaves(root, res);
     addRightBoundary(root, res);
