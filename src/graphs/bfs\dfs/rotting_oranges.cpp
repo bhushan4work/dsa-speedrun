@@ -3,71 +3,62 @@
 //           Return min no of min that must elapse until no cell has fresh orange. If this is impossible, return -1
 
 
-//(optimal) t.c- O(n * n * 4)  s.c- O(n * n)
-int orangesRotting(vector<vector<int>>& grid) {    
-    if (grid.empty()) return 0; // If the grid is empty, return 0 as no oranges exist
-    
-    // Get number of rows, columns in grid
-    int m = grid.size();
-    int n = grid[0].size();
+//(optimal) - used bfs here as we need min-time thru level traverse t.c- O(n * n * 4)  s.c- O(n * n)
+int orangesRotting(vector<vector<int>>& grid) {
+    int m = grid.size();                          // Number of rows
+    int n = grid[0].size();                       // Number of columns
 
-    int days = 0; // Var to store no of minutes passed
-    int tot = 0; // Var to store total no of oranges (fresh + rotten)
-    int cnt = 0; // Var to cnt how many oranges became rotten during process
+    queue<pair<int, int>> q;                      // Stores rotten oranges
+    int fresh = 0;                                // Count of fresh oranges
+    int minutes = 0;                              // Minutes passed
 
-    queue<pair<int, int>> rotten; // Queue to store positions of currently rotten oranges
+    // Traverse the grid
+    for (int i = 0; i < m; i++) {
+        for (int j = 0; j < n; j++) {
 
-    // Traverse grid to cnt total oranges & push rotten ones to queue
-    for (int i = 0; i < m; ++i) {
-        for (int j = 0; j < n; ++j) {
-            
-            if (grid[i][j] != 0){ // If cell is not empty (i.e has fresh or rotten orange)
-                tot++; // Count it as valid orange
-            }
+            if (grid[i][j] == 2)
+                q.push({i, j});                   // Add rotten orange to queue
 
-            if (grid[i][j] == 2) { // If it's rotten orange, add its position to queue
-                rotten.push({i, j});
-            }
+            else if (grid[i][j] == 1)
+                fresh++;                          // Count fresh oranges
         }
     }
 
-    // Arrays to explore 4 directions: right, left, down, up
-    int dx[4] = {0, 0, 1, -1};
-    int dy[4] = {1, -1, 0, 0};
+    // No fresh oranges present
+    if (fresh == 0) return 0;
 
-    // BFS traversal until all possible fresh oranges are rotted
-    while (!rotten.empty()) {
-        int k = rotten.size(); // No of rotten oranges to process at this min
-        cnt += k; // Add these many oranges to count of rotted oranges
+    int dx[4] = {-1, 1, 0, 0};                    // Row directions
+    int dy[4] = {0, 0, -1, 1};                    // Column directions
 
-        // Process all rotten oranges at this time step
-        while (k--) {
-            
-            // Get front orange from queue
-            int x = rotten.front().first;
-            int y = rotten.front().second;
-            rotten.pop();
+    // Multi-source BFS
+    while (!q.empty()) {
 
-            // Check all 4 directions
-            for (int i = 0; i < 4; ++i) {
-                int nx = x + dx[i]; // New x-coordinate
-                int ny = y + dy[i]; // New y-coordinate
+        int size = q.size();                      // Rotten oranges for current minute
 
-                if (nx < 0 || ny < 0 || nx >= m || ny >= n || grid[nx][ny] != 1){ // Skip invalid coord or already rotten/empty cells
+        while (size--) {
+
+            int x = q.front().first;              // Current row
+            int y = q.front().second;             // Current column
+            q.pop();
+
+            // Visit all 4 neighbours
+            for (int i = 0; i < 4; i++) {
+
+                int nx = x + dx[i];               // New row
+                int ny = y + dy[i];               // New column
+
+                if (nx < 0 || ny < 0 || nx >= m || ny >= n || grid[nx][ny] != 1) {// Skip invalid or non-fresh cells
                     continue;
                 }
 
-                grid[nx][ny] = 2; // Mark fresh orange as rotten
-
-                rotten.push({nx, ny}); // Add its position to queue to process in next min
+                grid[nx][ny] = 2;                 // Rot the fresh orange
+                fresh--;                          // One less fresh orange
+                q.push({nx, ny});                 // Process it in next minute
             }
         }
 
-        // If new oranges were added to queue, increase time
-        if (!rotten.empty()){
-            days++;
-        }
+        if (!q.empty()) minutes++; // Increase time only if new oranges will be processed
     }
 
-    return tot == cnt ? days : -1; // If all oranges are rotted, return total min passed. Otherwise, some fresh oranges are left unreachable, return -1
+    return (fresh == 0) ? minutes : -1;           // Return answer
 }
