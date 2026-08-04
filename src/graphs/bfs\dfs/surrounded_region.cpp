@@ -22,7 +22,7 @@ void dfs(int row, int col, vector<vector<int>> &vis, vector<vector<char>> &mat){
     }
 }
 
-vector<vector<char>> fill(int n, int m, vector<vector<char>> mat){
+vector<vector<char>> fill(int n, int m, vector<vector<char>>& mat){
     if (n == 0 || m == 0) return mat; // handle empty matrix
     vector<vector<int>> vis(n, vector<int>(m, 0)); // visited matrix
 
