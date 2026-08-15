@@ -2,7 +2,7 @@
 //           If vertex is unreachable from source node, then return -1 for that vertex 
 
 
-//(optimal) t.c- O(v + 2e)  s.c- O(v + 2e)
+//(optimal) -using bfs t.c- O(v + 2e)  s.c- O(v + 2e)
 vector<int> shortestPath(vector<vector<int>>& edges, int N, int M, int src) {
     vector<int> adj[N];                              // create adjacency list
 
