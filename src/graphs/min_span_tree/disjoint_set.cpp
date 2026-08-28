@@ -1,96 +1,85 @@
-//statement- union by rank
-// (optimal) t.c- O(4x) x = const
+// Disjoint Set Union (DSU) - Union by Rank
+// Time Complexity: O(alpha(n)) amortized per operation, approximately O(1)
 class DisjointSet {
     vector<int> rank, parent;
 
 public:
     DisjointSet(int n) {
-        rank.resize(n + 1, 0);              // rank of each node
-        parent.resize(n + 1);                // parent of each node
+        rank.resize(n + 1, 0);  // Rank of each node
+        parent.resize(n + 1);   // Parent of each node
 
-        for (int i = 0; i <= n; i++)
-            parent[i] = i;                  // initially, every node is its own parent
+        for (int i = 0; i <= n; i++) {
+            parent[i] = i;      // Initially, every node is its own parent
+        }
     }
 
     int findUPar(int node) {
         if (node == parent[node])
-            return node;                    // node is the ultimate parent
+            return node;  // Node is the ultimate parent
 
-        return parent[node] = findUPar(parent[node]); // path compression
+        return parent[node] = findUPar(parent[node]); // Path compression: directly connect node to ultimate parent
     }
 
     void unionByRank(int u, int v) {
-        int ulp_u = findUPar(u);             // ultimate parent of u
-        int ulp_v = findUPar(v);             // ultimate parent of v
+        int ulp_u = findUPar(u);  // Ultimate parent of u
+        int ulp_v = findUPar(v);  // Ultimate parent of v
 
-        if (ulp_u == ulp_v) return;         // already in the same component
+        if (ulp_u == ulp_v)
+            return;  // Already belong to the same component
 
-        if (rank[ulp_u] < rank[ulp_v])
-            parent[ulp_u] = ulp_v;           // attach smaller rank tree to larger
-        else if (rank[ulp_v] < rank[ulp_u])
-            parent[ulp_v] = ulp_u;           // attach smaller rank tree to larger
+        // Attach the tree with smaller rank to the tree with larger rank
+        if (rank[ulp_u] < rank[ulp_v]) {
+            parent[ulp_u] = ulp_v;
+        }
+        else if (rank[ulp_v] < rank[ulp_u]) {
+            parent[ulp_v] = ulp_u;
+        }
         else {
-            parent[ulp_v] = ulp_u;           // attach either tree to the other
-            rank[ulp_u]++;                   // increase rank of the new parent
+            parent[ulp_v] = ulp_u; // Both have the same rank, so attach either tree to the other
+            rank[ulp_u]++;  // Rank increases because the tree height increases
         }
     }
 };
 
 
 
-//statement- union by size
-// (optimal) t.c- O(4x) x = const
+// Disjoint Set Union (DSU) - Union by Size
+// Time Complexity: O(alpha(n)) amortized per operation, approximately O(1)
 class DisjointSet {
-    vector<int> rank, parent, size;
+    vector<int> parent, size;
 
 public:
     DisjointSet(int n) {
-        rank.resize(n + 1, 0);              // rank of each node
-        parent.resize(n + 1);                // parent of each node
-        size.resize(n + 1);                  // size of each component
+        parent.resize(n + 1);
+        size.resize(n + 1, 1);
 
         for (int i = 0; i <= n; i++) {
-            parent[i] = i;                  // initially, every node is its own parent
-            size[i] = 1;                    // each component initially has size 1
+            parent[i] = i;  // Initially, every node is its own parent
         }
     }
 
     int findUPar(int node) {
         if (node == parent[node])
-            return node;                    // node is the ultimate parent
+            return node;  // Node is the ultimate parent
 
-        return parent[node] = findUPar(parent[node]); // path compression
-    }
-
-    void unionByRank(int u, int v) {
-        int ulp_u = findUPar(u);             // ultimate parent of u
-        int ulp_v = findUPar(v);             // ultimate parent of v
-
-        if (ulp_u == ulp_v) return;         // already in the same component
-
-        if (rank[ulp_u] < rank[ulp_v])
-            parent[ulp_u] = ulp_v;           // attach smaller rank tree to larger
-        else if (rank[ulp_v] < rank[ulp_u])
-            parent[ulp_v] = ulp_u;           // attach smaller rank tree to larger
-        else {
-            parent[ulp_v] = ulp_u;           // attach either tree to the other
-            rank[ulp_u]++;                   // increase rank of the new parent
-        }
+        return parent[node] = findUPar(parent[node]);  // Path compression: directly connect node to ultimate parent
     }
 
     void unionBySize(int u, int v) {
-        int ulp_u = findUPar(u);             // ultimate parent of u
-        int ulp_v = findUPar(v);             // ultimate parent of v
+        int ulp_u = findUPar(u);  // Ultimate parent of u
+        int ulp_v = findUPar(v);  // Ultimate parent of v
 
-        if (ulp_u == ulp_v) return;         // already in the same component
+        if (ulp_u == ulp_v)
+            return;  // Already belong to the same component
 
+        // Attach the smaller component to the larger component
         if (size[ulp_u] < size[ulp_v]) {
-            parent[ulp_u] = ulp_v;           // attach smaller component to larger
-            size[ulp_v] += size[ulp_u];      // update size of the new component
+            parent[ulp_u] = ulp_v;
+            size[ulp_v] += size[ulp_u];  // Update size of the new component
         }
         else {
-            parent[ulp_v] = ulp_u;           // attach smaller component to larger
-            size[ulp_u] += size[ulp_v];      // update size of the new component
+            parent[ulp_v] = ulp_u;
+            size[ulp_u] += size[ulp_v];  // Update size of the new component
         }
     }
 };
