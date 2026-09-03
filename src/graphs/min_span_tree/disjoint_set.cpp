@@ -1,5 +1,5 @@
 // Disjoint Set Union (DSU) - Union by Rank
-// Time Complexity: O(alpha(n)) amortized per operation, approximately O(1)
+// t.c : O(alpha(n)) amortized per operation, approximately O(1)
 class DisjointSet {
     vector<int> rank, parent;
 
@@ -44,7 +44,7 @@ public:
 
 
 // Disjoint Set Union (DSU) - Union by Size
-// Time Complexity: O(alpha(n)) amortized per operation, approximately O(1)
+// t.c : O(alpha(n)) amortized per operation, approximately O(1)
 class DisjointSet {
     vector<int> parent, size;
 
