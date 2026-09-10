@@ -1,5 +1,5 @@
-//statement- Given arr of N positive integers, return max sum of subsequence such that no 2 elements of subsequence are adjacent elements in arr.
-//Note: subsequence of arr is list with elements where some elements are deleted (or not deleted at all) & elements should be in same order in subsequence as in arr
+//statement- robber planning to rob. Each house has certain amt of money, only constraint stopping you from robbing is that u cant rob 2 adjacent houses
+//           Given integer arr nums representing amt of money of each house, return max amt of money u can rob tonight without alerting police
 
 
 // (optimal) -memoization t.c- O(n)  s.c- O(n + n)
