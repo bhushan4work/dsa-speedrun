@@ -22,7 +22,7 @@ int solve(vector<int>& arr, int i, vector<int>& dp) {
     return dp[i] = max(pick, notPick); // Store and return max of both choices
 }
 
-int maximumNonAdjacentSum(vector<int>& arr) { // Main function to be called externally
+int rob(vector<int>& arr) { // Main function to be called externally
     int n = arr.size();
     vector<int> dp(n, -1); // DP array initialized with -1
 
@@ -32,7 +32,7 @@ int maximumNonAdjacentSum(vector<int>& arr) { // Main function to be called exte
 
 
 // (optimal) -tabulation t.c- O(n)  s.c- O(n)
-int maximumNonAdjacentSum(vector<int>& arr) {
+int rob(vector<int>& arr) {
     int n = arr.size(); // Get the size of array
     if (n == 1) { // If array has only one element, return it
         return arr[0];
