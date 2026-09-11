@@ -41,7 +41,7 @@ int rob(vector<int>& arr) {
 
 
 // (optimal) - tabulation t.c- O(n)  s.c- O(n)
-int maximumNonAdjacentSum(vector<int>& arr) {
+int rob(vector<int>& arr) {
     int n = arr.size(); // Get the size of the array
 
     if (n == 1) { // If only one house exists
