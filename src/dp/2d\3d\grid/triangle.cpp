@@ -3,26 +3,28 @@
 
 
 // (optimal) -memoization t.c- O(n * n)  s.c- O(n + n * n)
-int solve(int i, int j, vector<vector<int>> &triangle, int n, vector<vector<int>> &dp) {
-    if (dp[i][j] != -1) { // If value already computed
-        return dp[i][j];
-    }
+int solve(int i, int j, vector<vector<int>>& triangle,
+          vector<vector<int>>& dp) {
 
-    if (i == n - 1) { // If at bottom row
+    int n = triangle.size();
+
+    if (i == n - 1)
         return triangle[i][j];
-    }
 
-    int down = triangle[i][j] + solve(i + 1, j, triangle, n, dp); // Compute both downward and diagonal moves
-    int diag = triangle[i][j] + solve(i + 1, j + 1, triangle, n, dp);
+    if (dp[i][j] != -1)
+        return dp[i][j];
 
-    return dp[i][j] = min(down, diag); // Store and return min path sum
+    int down = solve(i + 1, j, triangle, dp);
+    int diag = solve(i + 1, j + 1, triangle, dp);
+
+    return dp[i][j] = triangle[i][j] + min(down, diag);
 }
 
-int minimumPathSum(vector<vector<int>> &triangle) { // Function to start the process
+int minimumTotal(vector<vector<int>>& triangle) {
     int n = triangle.size();
     vector<vector<int>> dp(n, vector<int>(n, -1));
 
-    return solve(0, 0, triangle, n, dp);
+    return solve(0, 0, triangle, dp);
 }
 
 
