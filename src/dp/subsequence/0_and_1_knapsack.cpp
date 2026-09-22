@@ -3,7 +3,7 @@
 //           Each item can either be picked in its entirety or not picked at all (0-1 property). do max sum of values of selected items while keeping total wt within knapsack's capacity
 
 
-// (optimal) -memoization t.c- O(n * k)  s.c- O(n + n * k)
+// (optimal) -memoization t.c- O(n * w)  s.c- O(n + n * w)
 int solve(int i, int W, vector<int> &val, vector<int> &wt, vector<vector<int>> &dp) {
     if (i == 0) {                                      // only first item remains
         if (wt[0] <= W)
@@ -32,7 +32,7 @@ int knapsack(int W, vector<int> &val, vector<int> &wt) {
 
 
 
-// (optimal) -tabulation t.c- O(n * k)  s.c- O(n * k)
+// (optimal) -tabulation t.c- O(n * w)  s.c- O(n * w)
 int knapsack(int W, vector<int> &val, vector<int> &wt) {
     vector<vector<int>> dp(n, vector<int>(W + 1, 0));      // dp[i][w] = max value using items 0...i
 
