@@ -2,7 +2,7 @@
 //           not necessarily contiguous & common subseq of 2 strings is subseq that is common to both strings
 
 
-// (optimal) -memoization t.c- O(n * m)  s.c- O(n + m +  n * m)
+// (optimal) -memoization t.c- O(n * m)  s.c- O(n + m + n * m)
 int helper(int i, int j, string& a, string& b, vector<vector<int>>& dp) {
     if (i < 0 || j < 0) return 0;                    // no characters left
 
