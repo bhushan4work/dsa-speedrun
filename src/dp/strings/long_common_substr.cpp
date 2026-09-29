@@ -31,7 +31,7 @@ int longestCommonSubstring(string &a, string &b) {
 
 
 
-// (optimal) -tabulation t.c- O(n * m)  s.c- O(n + m +  n * m)
+// (optimal) -tabulation t.c- O(n * m)  s.c- O(n * m)
 int longestCommonSubstring(string &a, string &b) { // main function
     int n = a.size(), m = b.size(); // get lengths of both strings
     vector<vector<int>> dp(n + 1, vector<int>(m + 1, 0)); // initialize dp table
