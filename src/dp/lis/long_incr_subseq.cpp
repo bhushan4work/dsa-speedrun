@@ -44,3 +44,25 @@ int lengthOfLIS(vector<int>& nums) {
 
     return dp[0][0];                                       // start at index 0, prev = -1
 }
+
+
+
+// (optimal) -using bs t.c- O(n * logn) s.c- O(n)
+int longestIncreasingSubsequence(int arr[], int n){
+    vector<int> temp;
+    temp.push_back(arr[0]);
+    int len = 1;
+
+    for(int i = 1; i < n; i++) {
+        if(arr[i] > temp.back()) {
+            temp.push_back(arr[i]);
+            len++;
+        }
+        else {
+            int ind = lower_bound(temp.begin(), temp.end(), arr[i]) - temp.begin();
+            temp[ind] = arr[i];
+        }
+    }
+
+    return len;
+}
