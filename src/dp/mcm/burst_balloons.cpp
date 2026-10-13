@@ -35,7 +35,7 @@ int maxCoins(vector<int>& nums) {
 
 
 
-// (optimal) -tabulation t.c- O(n ^ 3) s.c- O(n ^ 2 + n)
+// (optimal) -tabulation t.c- O(n ^ 3) s.c- O(n ^ 2)
 int maxCoins(vector<int>& nums) {
     int n = nums.size();
 
