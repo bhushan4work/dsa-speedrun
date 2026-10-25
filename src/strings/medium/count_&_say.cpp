@@ -14,23 +14,18 @@ string countAndSay(int n) {
         return "1";   // first term is always "1"
 
     string say = countAndSay(n-1);          // Recursively get (n-1)th term to build current term
-
-    //Processing
     string result = "";                       // Initialize an empty string to store generated result
 
+    
     for(int i = 0; i<say.length(); i++) {            // Iterate through every character of previous term
-
         char ch = say[i];                          // Store current character being counted
-
-        int count = 1;                             // Initialize frequency count of current character
-
+        int count = 1;                             // Initialize frequency count of current characte
         while(i < say.length()-1 && say[i] == say[i+1]) {    // Check if next character exists and is identical
             count++;                                    // Increment count for consecutive identical character
             i++;                                   // Advance index to skip counted character
         }
 
         result += to_string(count) + string(1, ch);      // Append count (as string) followed by character itself
-
     }
 
     return result;                               // Return fully constructed string for nth term
