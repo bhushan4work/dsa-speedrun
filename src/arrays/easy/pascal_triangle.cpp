@@ -34,3 +34,20 @@ vector<int> getRow(int rowIndex) { // Returns requested row of Pascal's Triangle
 
     return result;
 }
+
+
+
+//statement- Given 2 0-indexed integers r & c, return corresponding element at r-th row & c-th column of Pascal's Triangle
+
+int getElement(int r, int c) {
+    if (c > r - c) {                       // Optimization using symmetry: C(r, c) == C(r, r-c)
+        c = r - c;                         // Reduces the no of iterations needed ex: [1 3 3 1] here instead of running loop 2nd ind, we'll loop till 1st ind
+    }
+
+    long long res = 1;                     // Initialize result
+    for (int i = 0; i < c; i++) {          // Iteratively calculate nCr
+        res = res * (r - i) / (i + 1);     // Multiply by numerator term, divide by denominator term
+    }
+
+    return res;                            // Return final calculated element
+}
