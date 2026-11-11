@@ -4,13 +4,13 @@
 //            If cell (0, 0) has 0 value, then mouse cant move to any other cell. Note : In a path no cell can be visited more than once. If no possible path, return empty vector.
 
 
-// (optimal) t.c- O(n!)  s.c- O(n ^ 2)
+// (optimal) t.c- O(4 ^ (n ^ 2))  s.c- O(n ^ 2)
 void solve(int i, int j, vector<vector<int>>& a, int n, vector<string>& ans, string move, vector<vector<int>>& vis) {
     if (i == n - 1 && j == n - 1) { // Base case: Reached the destination
         ans.push_back(move);
         return;
     }
-    
+
     if (i + 1 < n && !vis[i + 1][j] && a[i + 1][j] == 1) { // Downward movement
         vis[i][j] = 1;
         solve(i + 1, j, a, n, ans, move + 'D', vis);
