@@ -68,7 +68,7 @@ ListNode* mergeKLists(vector<ListNode*>& lists) {
 
 
 
-// (optimal) t.c- O(nlogk)  s.c- O(k)
+// (optimal) -using min-heap t.c- O(nlogk)  s.c- O(k)
 struct compare {
     bool operator()(ListNode* a, ListNode* b) {
         return a->val > b->val; // Min-heap comparator based on node values.
