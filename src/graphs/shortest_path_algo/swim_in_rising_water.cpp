@@ -34,7 +34,6 @@ int swimInWater(vector<vector<int>>& grid) {
 
 
 //(optimal) -bs with dfs t.c- O(n^2 * logn)  s.c- O(n^2)
-// TC: O(N^2 log(MAX_ELEVATION)) | SC: O(N^2) where N is grid dimension.
 int swimInWater(vector<vector<int>>& grid) {
     int m = grid.size(), n = grid[0].size(); // Get grid dimensions to check boundaries.
     vector<pair<int,int>> directions = {{0,1}, {1,0}, {0,-1}, {-1,0}}; // 4-way directional moves (right, down, left, up).
